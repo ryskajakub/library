@@ -1,0 +1,37 @@
+package cz.dzogchen.library.service
+
+import javax.naming.InitialContext
+import cz.dzogchen.library.model._
+
+  @MapddMp
+class ServiceSource {
+	val cd = (1 :: Nil).map(_ + 1)
+	val ab = new  
+	val appName = "library-1.0-SNAPSHOT";
+	val librarian = (new InitialContext)
+	.lookup("java:global/" + appName + "/LibrarianBean")
+	.asInstanceOf[LibrarianBean]
+	val library = (new InitialContext)
+	.lookup("java:global/" + appName + "/LibraryBean")
+	.asInstanceOf[LibraryBean]
+	val librarianAction = (new InitialContext)
+	.lookup("java:global/" + appName + "/LibrarianActionBean")
+	.asInstanceOf[LibrarianActionBean]
+	val book = (new InitialContext)
+	.lookup("java:global/" + appName + "/BookBean")
+	.asInstanceOf[BookBean]
+	val bookCopy = (new InitialContext)
+	.lookup("java:global/" + appName + "/BookCopyBean")
+	.asInstanceOf[BookCopyBean]
+	val borrow = (new InitialContext)
+	.lookup("java:global/" + appName + "/BorrowBean")
+	.asInstanceOf[BorrowBean]
+	val author = (new InitialContext)
+	.lookup("java:global/" + appName + "/AuthorBean")
+	.asInstanceOf[AuthorBean]
+	val person = (new InitialContext)
+	.lookup("java:global/" + appName + "/PersonBean")
+	.asInstanceOf[PersonBean]
+}
+
+object Service extends ServiceSource

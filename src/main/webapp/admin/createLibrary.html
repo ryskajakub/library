@@ -1,0 +1,14 @@
+<lift:surround with="adminDefault" at="content">
+	<h1>Create library</h1>
+	<lift:LibrarySnippet.create form="post">
+		<entry:place />
+		Create password:
+		<entry:createPassword />
+		<entry:submit />
+	</lift:LibrarySnippet.create>
+	<lift:LibrarySnippet.modify>
+		<ul>
+			<entry:anchors />
+		</ul>
+	</lift:LibrarySnippet.modify>
+</lift:surround>

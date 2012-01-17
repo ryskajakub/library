@@ -1,0 +1,22 @@
+<lift:surround with="userDefault" at="content">
+	<div id="allBooksBox">
+		<table class="listTable">
+			<tr>
+				<th><lift:loc locid="name" /></th>
+				<th><lift:loc locid="code" /></th>
+				<th><lift:loc locid="state" /></th>
+				<th><lift:loc locid="person" /></th>
+				<th><lift:loc locid="lib" /></th>
+			</tr>
+			<lift:Browse.repeatAllBooks>
+				<tr>
+					<td><entry:name/></td>
+					<td><entry:code/></td>
+					<td><entry:state/></td>
+					<td><entry:person/></td>
+					<td><entry:library/></td>
+				</tr>
+			</lift:Browse.repeatAllBooks>
+		</table>
+	</div>
+</lift:surround>

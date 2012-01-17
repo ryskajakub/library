@@ -1,0 +1,14 @@
+<lift:surround with="adminDefault" at="content">
+	<h1>Librarian actions</h1>
+	<table>
+		<tr><th>Librarian</th><th>Action</th><th>Date</th><th>Description</th></tr>
+		<lift:LibrarianActionSnippet>
+			<tr>
+				<td><entry:librarian/></td>
+				<td><entry:action/></td>
+				<td><entry:date/></td>
+				<td><entry:description/></td>
+			</tr>
+		</lift:LibrarianActionSnippet>
+	</table>
+</lift:surround>

@@ -1,0 +1,31 @@
+<lift:surround with="default" at="content">
+	<div class="baseBox">
+		<lift:TestCond.loggedIn>
+			<div id="menu">
+				<lift:Login.loggedIn>
+					<strong><lift:loc locid="user" /></strong>
+					<entry:username>
+						<lift:loc locid="noLogged"/>
+					</entry:username>
+					<strong> <lift:loc locid="lib"/> </strong>
+					<entry:library>
+						<lift:loc locid="noLib"/>
+					</entry:library>
+					<entry:logout>
+						<img alt="" src="../stuff/logoutLabel.gif" />
+					</entry:logout>
+				</lift:Login.loggedIn>
+				<lift:menu.item name="new"> <img alt="" src="../stuff/new.gif"/></lift:menu.item>
+				<lift:menu.item name="scanning"> <img alt="" src="../stuff/scanLabel.gif"/></lift:menu.item>
+				<lift:menu.item name="allBooks"> <img alt="" src="../stuff/allBooks.gif"/></lift:menu.item>
+				<lift:menu.item name="allPerson"> <img alt="" src="../stuff/allUser.gif"/></lift:menu.item>
+			</div>
+			<lift:bind name="content" />
+		</lift:TestCond.loggedIn>
+		<lift:TestCond.loggedOut>
+			<lift:BackToSlash>
+				<link:slash><lift:loc locid="home"/></link:slash>
+			</lift:BackToSlash>
+		</lift:TestCond.loggedOut>
+	</div>
+</lift:surround>

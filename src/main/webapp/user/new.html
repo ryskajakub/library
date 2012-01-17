@@ -1,0 +1,67 @@
+<lift:surround with="userDefault" at="content">
+	<div id="newBox">
+		<div id="newBookBox" class="newBoxes fadeBox">
+			<h2><img alt=""  src="../stuff/newBook.gif" /></h2>
+			<lift:NewBook.book form="post">
+				<div class="validate">
+					<label for="name"><lift:loc locid="name"/></label>
+					<book:name class="min1"><input type="name"/></book:name>
+				</div>
+				<div class="validate">
+					<label for="authors"><lift:loc locid="authors"/></label>
+					<book:authors class="option1">
+						<select><option><lift:loc locid="option"/></option></select>
+					</book:authors>
+				</div>
+				<book:submit class="lock"><input type="submit"/></book:submit>
+			</lift:NewBook.book>
+			<ul>
+				<lift:NewBook.allBooks>
+					<li>
+					<book:name/>
+					</li>
+				</lift:NewBook.allBooks>
+			</ul>
+		</div>
+		<div id="newAuthorBox" class="newBoxes fadeBox">
+			<h2><img alt=""  src="../stuff/newAuthor.gif" /></h2>
+			<lift:NewAuthor.author form="post">
+				<label for="name"><lift:loc locid="name"/></label>
+				<author:name>authorNameInfo</author:name><span id="authorNameInfo"></span>
+				<author:submit/><span id="info"></span>
+			</lift:NewAuthor.author>
+			<ul>
+				<lift:NewAuthor.allAuthors>
+					<li>
+					<author:name/>
+					</li>
+				</lift:NewAuthor.allAuthors>
+			</ul>
+		</div>
+		<div id="newPersonBox" class="newBoxes fadeBox">
+			<h2><img alt=""  src="../stuff/newUser.gif" /></h2>
+			<lift:NewPerson.person form="post">
+				<div class="validate">
+					<label for="name" ><lift:loc locid="name"/></label>
+					<person:name id="name" class="min1" />
+				</div>
+				<div class="validate">
+					<label for="email"><lift:loc locid="email"/></label>
+					<person:email id="email" class="email" />
+				</div>
+				<div class="validate">
+					<label for="telephone"><lift:loc locid="tel"/></label>
+					<person:telephone id="telephone" class="min1" />
+				</div>
+				<person:submit class="lock" />
+			</lift:NewPerson.person>
+			<ul>
+				<lift:NewPerson.allPerson>
+					<li>
+					<person:name/>
+					</li>
+				</lift:NewPerson.allPerson>
+			</ul>
+		</div>
+	</div>
+</lift:surround>

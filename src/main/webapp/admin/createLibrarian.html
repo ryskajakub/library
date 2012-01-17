@@ -1,0 +1,19 @@
+<lift:surround with="adminDefault" at="content">
+	<h1>Create librarian</h1>
+	<lift:LibrarianSnippet.create form="post">
+		<entry:name />
+		<entry:password />
+		<entry:permittedLibraries/>
+		<entry:canDelete />
+		Create password:
+		<entry:createPassword />
+		<entry:submit />
+	</lift:LibrarianSnippet.create>
+	<ul>
+		<lift:LibrarianSnippet.modify>
+			<li>
+				<entry:anchors/>
+			</li>
+		</lift:LibrarianSnippet.modify>
+	</ul>
+</lift:surround>

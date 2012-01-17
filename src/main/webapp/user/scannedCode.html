@@ -1,0 +1,69 @@
+<lift:surround with="userDefault" at="content">
+	<div id="scannedCodBox">
+		<lift:Scanning.scannedCode>
+			<h1 class="code">
+				<lift:loc locid="code" />:
+				<entry:name />
+			</h1>
+			<entry:history>
+				<table class="listTable">
+					<lift:loc locid=""/>
+					<tr>
+						<th><lift:loc locid="person"/></th>
+					<th><lift:loc locid="from"/></th>
+					<th><lift:loc locid="to"/></th>
+					</tr>
+					<lift:Scanning.listBorrows>
+						<tr>
+							<td><entry:person/></td>
+						<td><entry:from/></td>
+						<td><entry:to/></td>
+						</tr>
+					</lift:Scanning.listBorrows>
+				</table>
+			</entry:history>
+		</lift:Scanning.scannedCode>
+		<lift:Scanning.returnBook form="post">
+			<label for="return"><lift:loc locid="return"/></label>
+			<entry:submit id="return" />
+		</lift:Scanning.returnBook>
+		<lift:Scanning.attachBook form="post">
+			<entry:library />
+			<entry:submit id="attach" />
+		</lift:Scanning.attachBook>
+		<lift:Scanning.here form="post">
+			<ul class="choice">
+				<li>
+					<label for="selectPerson"><lift:loc locid="selPer"/></label>
+				<entry:selectPerson />
+				<label for="borrow" ><lift:loc locid="bor"/></label>
+				<entry:borrow id="borrow" />
+				</li>
+				<li>
+					<label for="putAway" ><lift:loc locid="putAway"/></label>
+				<entry:putAway id="putAway" />
+				</li>
+				<li>
+					<label for="returnToPublisher" ><lift:loc locid="retPbl"/></label>
+				<entry:returnToPublisher id="returnToPublisher" />
+				</li>
+			</ul>
+		</lift:Scanning.here>
+		<lift:Scanning.newBookCopy form="post">
+			<h2><lift:loc locid="newBookCopy"/></h2>
+			<div>
+				<label for="book"><lift:loc locid="book"/>:</label>
+				<bookCopy:book />
+			</div>
+			<div>
+				<label for="library"><lift:loc locid="lib"/>:</label>
+				<bookCopy:library />
+			</div>
+			<div>
+				<strong><lift:loc locid="code" />:</strong>
+				<bookCopy:code />
+			</div>
+			<bookCopy:submit />
+		</lift:Scanning.newBookCopy>
+	</div>
+</lift:surround>

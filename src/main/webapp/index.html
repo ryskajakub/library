@@ -1,0 +1,18 @@
+<lift:surround with="publicDefault" at="content">
+	<head>
+		<title><lift:loc locid="lib" /></title>
+	</head>
+	<div id="libLogin" class="baseBox">
+		<div id="loginBox">
+			<lift:Login form="post">
+				<label for="username"><lift:loc locid="name" />:</label>
+				<entry:username id="username" />
+				<label for="password"><lift:loc locid="password" />:</label>
+				<entry:password id="password" />
+				<label for="library"><lift:loc locid="place" />:</label>
+				<entry:library id="library" />
+				<entry:submit />
+			</lift:Login>
+		</div>
+	</div>
+</lift:surround>

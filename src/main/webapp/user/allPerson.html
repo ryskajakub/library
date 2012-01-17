@@ -1,0 +1,18 @@
+<lift:surround with="userDefault" at="content">
+	<div id="allPersonBox">
+		<table class="listTable">
+			<tr>
+				<th><lift:loc locid="name"/></th>
+			<th><lift:loc locid="email"/></th>
+			<th><lift:loc locid="tel"/></th>
+			</tr>
+			<lift:Browse.repeatAllPerson>
+				<tr>
+					<td><column:name /></td>
+				<td><column:email /></td>
+				<td><column:tel /></td>
+				</tr>
+			</lift:Browse.repeatAllPerson>
+		</table>
+	</div>
+</lift:surround>

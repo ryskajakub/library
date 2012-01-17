@@ -1,0 +1,45 @@
+<lift:surround with="default" at="content">
+	<head>
+		<title>Library</title>
+		<script type="text/javascript">
+			<![CDATA[
+				$(document).ready(function(){
+					$("input#search").quicksearch("table#publicBooks tbody tr");
+				});
+			]]>
+		</script>
+	</head>
+	<div id="publicBrowse">
+		<lift:PublicBrowse>
+			<table id="publicBooks">
+				<thead>
+					<tr>
+						<td colspan="4">
+						<h1>Knihovna dzogčhenové komunity</h1> Hledej:<input type="text" id="search" />
+						</td>
+					</tr>
+					<tr>
+						<th><lift:loc locid="book"/></th>
+				<th>Autoři</th>
+				<th><lift:loc locid="lib"/></th>
+				<th>K dispozici</th>
+				</tr>
+				</thead>
+				<tbody>
+				<repeat:body>
+					<tr>
+						<td><book:book/></td>
+						<td>
+						<book:authors>
+							<author:author/>
+						</book:authors>
+						</td>
+						<td><book:library/></td>
+						<td><book:available/></td>
+					</tr>
+				</repeat:body>
+				</tbody>
+			</table>
+		</lift:PublicBrowse>
+	</div>
+</lift:surround>

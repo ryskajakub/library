@@ -1,0 +1,135 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size:20px;
+	color:black;
+}
+#scanningDiv{
+	width: 1000px;
+}
+#scanningDiv #scanning{
+	height: 80px;
+	width: 600px;
+	margin: 0px auto;
+	display: block;
+	font-size: 72px;
+	position: relative;
+	top: 200px;
+}
+#scanningDiv #scanningSubmit{
+	display: block;
+	margin: 0px auto;
+	position: relative;
+	top: 200px;
+}
+#scanningBox, #scannedCodBox{
+	background-image: url("../stuff/scanBack.jpg");
+	min-height: 720px;
+	position: relative;
+}
+#libLogin{
+	background-image: url("../stuff/login.jpg");
+}
+#libLogin #loginBox{
+	position: absolute;
+	top:400px;
+	width: 200px;
+	left: 400px;
+	background-color: gray;
+	opacity:0.7;filter:alpha(opacity=70);
+}
+.fadeBox{
+	background-color: gray;
+	opacity:0.8;filter:alpha(opacity=80);
+}
+#libLogin #loginBox label, #libLogin #loginBox input{
+	display: block;
+}
+.baseBox{
+	background-repeat: repeat-y;
+	width: 960px;
+	min-height: 720px;
+	margin: 0px auto;
+	position: relative;
+}
+#newBox{
+	background-image: url("../stuff/libNew.jpg");
+	min-height: 720px;
+	position: relative;
+}
+.newBoxes ul{
+	list-style-type: none;
+}
+.newBoxes{
+	width: 300px;
+	position: absolute;
+	margin: 14px;
+}
+#newAuthorBox{
+	left: 320px;
+}
+#newPersonBox{
+	left: 640px;
+}
+#allPersonBox{
+	background-image: url("../stuff/allPerson.jpg");
+	min-height: 720px;
+	position: relative;
+}
+#allBooksBox{
+	background-image: url("../stuff/allBooks.jpg");
+	min-height: 720px;
+	position: relative;
+}
+.listTable{
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 940px;
+	min-height: 500px;
+	background-color: gray;
+	opacity:0.7;filter:alpha(opacity=70);
+}
+.listTable th{
+	font-weight: 900;
+}
+a{
+	color: black;
+}
+#menu{
+	font-size:15px;
+}
+#menu strong{
+	font-size:15px;
+}
+#menu a{
+	margin: 0px;
+	padding: 0px;
+}
+.code{
+	font-size: 30px;
+}
+.choice li{
+	width: 320px;
+	display: block;
+	background-color: gray;
+	opacity:0.7;filter:alpha(opacity=70);
+	margin: 10px;
+}
+#publicBrowse{
+	width: 100%;
+	background-image: url("../stuff/allBooksChanged.jpg");
+}
+#publicBrowse table, #publicBrowse h1{
+	width: 97%;
+	margin-left: 3%;
+}
+#publicBrowse th{
+	font-weight: bold;
+}
+#publicBrowse h1{
+	margin-right: 100px;
+	display:inline;
+	font-weight: bold;
+}
+
+

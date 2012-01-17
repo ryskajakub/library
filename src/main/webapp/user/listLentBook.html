@@ -1,0 +1,23 @@
+<lift:surround with="userDefault" at="content">
+	<h1><lift:loc locid="listLent"/></h1>
+	<table>
+		<tr>
+			<th><lift:loc locid="who"/></th>
+			<th><lift:loc locid="what"/></th>
+			<th><lift:loc locid="bookCode"/></th>
+			<th><lift:loc locid="startDate"/></th>
+			<th><lift:loc locid="shouldDate"/></th>
+			<th><lift:loc locid="fine"/></th>
+		</tr>
+		<lift:Browse.repeatLentBooks>
+			<tr>
+				<td><column:who /></td>
+				<td><column:what /></td>
+				<td><column:code /></td>
+				<td><column:startDate /></td>
+				<td style="border-left: 1px solid black"><column:shouldDate /></td>
+				<td><column:fine /></td>
+			</tr>
+		</lift:Browse.repeatLentBooks>
+	</table>
+</lift:surround>
