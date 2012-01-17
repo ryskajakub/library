@@ -1,4 +1,4 @@
-package cz.dzogchen.library.model;
+package jr.library.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

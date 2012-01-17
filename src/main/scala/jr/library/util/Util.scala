@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package cz.dzogchen.library
+package jr.library
 
 import java.text.SimpleDateFormat
 import java.util.Date

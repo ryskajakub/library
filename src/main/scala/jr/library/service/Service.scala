@@ -1,7 +1,7 @@
-package cz.dzogchen.library.service
+package jr.library.service
 
 import javax.naming.InitialContext
-import cz.dzogchen.library.model._
+import jr.library.model._
 import net.liftweb.http.GetRequest
 import net.liftweb.http.Req
 import net.liftweb.http.rest.RestHelper
@@ -13,7 +13,7 @@ import scala.collection.JavaConversions._
 
 class ServiceSource {
 	//val appName = "library-1.0-SNAPSHOT"
-	//val appName = "cz.dzogchen_library_war_1.0-SNAPSHOT"
+	//val appName = "jr_library_war_1.0-SNAPSHOT"
 	val appName = "lib" // ok
 	val librarian = (new InitialContext)
 	.lookup("java:global/" + appName + "/LibrarianBean")

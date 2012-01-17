@@ -7,11 +7,11 @@ import net.liftweb.http.rest._
 import _root_.net.liftweb.http.provider._
 import _root_.net.liftweb.sitemap._
 import _root_.net.liftweb.sitemap.Loc._
-import cz.dzogchen.library.snippet.loggedLibrarian
+import jr.library.snippet.loggedLibrarian
 import net.liftweb.common.Full
 import net.liftweb.http.auth.AuthRole
 import net.liftweb.http.auth.HttpBasicAuthentication//
-import cz.dzogchen.library.service._
+import jr.library.service._
 
 
 class Boot {
@@ -30,7 +30,7 @@ class Boot {
 
 	def boot {
 		LiftRules.statelessDispatchTable.append(MyRest)
-		LiftRules.addToPackages("cz.dzogchen.library")
+		LiftRules.addToPackages("jr.library")
 		LiftRules.localeCalculator = (x) => new Locale("cs")
 		LiftRules.resourceNames = "messages" :: LiftRules.resourceNames
 		LiftRules.setSiteMap(SiteMap(index,librarianActions,createLibrary,createLibrarian

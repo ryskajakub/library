@@ -1,4 +1,4 @@
-package cz.dzogchen.library.model
+package jr.library.model
 
 import java.io.Serializable
 import java.util.logging.Logger
@@ -7,7 +7,7 @@ import java.lang.{Long => JLong}
 import javax.persistence._
 import javax.validation.constraints._
 import scala.reflect.BeanProperty
-import cz.dzogchen.library.util._
+import jr.library.util._
 import scala.collection.JavaConversions._
 
 @Entity

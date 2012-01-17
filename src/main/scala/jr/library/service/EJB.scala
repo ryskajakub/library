@@ -1,4 +1,4 @@
-package cz.dzogchen.library.service
+package jr.library.service
 
 import java.text.DateFormat
 import javax.mail.Message
@@ -15,8 +15,8 @@ import java.util.logging.Logger
 import javax.annotation._
 import org.scala_libs.jpa.ScalaEntityManager
 import scala.reflect._
-import cz.dzogchen.library.model.BookCopy
-import cz.dzogchen.library.model._
+import jr.library.model.BookCopy
+import jr.library.model._
 import scala.collection.JavaConversions._
 
 class Sem(manager:EntityManager) extends ScalaEntityManager{

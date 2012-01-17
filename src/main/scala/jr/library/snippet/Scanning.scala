@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package cz.dzogchen.library.snippet
+package jr.library.snippet
 
 import java.util.logging.Logger
 import net.liftweb.common.Empty
@@ -12,11 +12,11 @@ import S._
 import net.liftweb.util._
 import Helpers._
 import scala.xml._
-import cz.dzogchen.library._
-import cz.dzogchen.library.service._
-import cz.dzogchen.library.model._
+import jr.library._
+import jr.library.service._
+import jr.library.model._
 import scala.collection.JavaConversions._
-import cz.dzogchen.library.util._
+import jr.library.util._
 import java.util.Date
 
 
