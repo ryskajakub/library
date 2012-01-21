@@ -19,13 +19,6 @@ $(document).ready(function(){
 					allValuesAreValid = false;
 				}
 			});
-			/*
-			emailFields.each(function(){
-				if (($(this).val().match(/^[^@]+@\w+\.[a-z]{2,}$/) == null)){
-					allValuesAreValid = false;
-				}
-			});
-			*/
 			return allValuesAreValid;
 		};
 		var formScope = $(this);
