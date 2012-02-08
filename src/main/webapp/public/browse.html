@@ -13,17 +13,18 @@
 		<lift:PublicBrowse>
 			<table id="publicBooks">
 				<thead>
-					<tr>
-						<td colspan="4">
+                    <tr>
+                        <td colspan="5">
                             <h1>Knihovna dzogčhenové komunity</h1> Hledej:<input type="text" id="search" />
-						</td>
-					</tr>
-					<tr>
-                <th><lift:loc locid="book"/></th>
-				<th>Autoři</th>
-				<th><lift:loc locid="lib"/></th>
-				<th>K dispozici</th>
-				</tr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><lift:loc locid="book"/></th>
+                        <th>Autoři</th>
+                        <th><lift:loc locid="lib"/></th>
+                        <th>K dispozici</th>
+                        <th>Kód</th>
+                    </tr>
 				</thead>
 				<tbody>
 				<repeat:body>
@@ -36,6 +37,7 @@
 						</td>
 						<td><book:library/></td>
 						<td><book:available/></td>
+                        <td><book:code/></td>
 					</tr>
 				</repeat:body>
 				</tbody>

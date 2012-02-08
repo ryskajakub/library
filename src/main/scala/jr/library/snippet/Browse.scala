@@ -32,7 +32,8 @@ class PublicBrowse {
                     }
                 },
                 "library" -%> Text(x.library.place),
-                "available" -%> Text(state)
+                "available" -%> Text(state),
+                "code" -%> Text(x.code)
               )
             }
           }
