@@ -24,7 +24,7 @@ class Boot {
 	val createLibrarian = Menu("createLibrarian",S ? "crLibn") ./ ("admin") / "createLibrarian" >> LocGroup("admin")
 	val createLibrary = Menu("createLibrary",S ? "crLib") ./ ("admin") / "createLibrary" >> LocGroup("admin")
 	val librarianActions = Menu("librarianActions",S ? "librAct") ./ ("admin") / "librarianActions" >> LocGroup("admin")
-	val allBooks = Menu("allBooks",S ? "allBooks") / ("user") / ("allBooks") >> LocGroup("user") 
+	val allBooks = Menu("allBooks",S ? "allBooks") / ("user") / ("listLentBook") >> LocGroup("user")
 	val allPerson = Menu("allPerson", S ? "allPerson") / "user" / "allPerson" >> LocGroup("user")
 	val publicBrowse = Menu("publicBrowse", S ? "publicBrowse") / "public" / "browse" >> LocGroup("public")
 

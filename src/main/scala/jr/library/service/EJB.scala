@@ -188,7 +188,7 @@ class BorrowBean extends GenericBean[Borrow] {
 	override def save(b:Borrow) {
 		val bor = sem.mergeAndFlush(b)
 		val dateFormat = DateFormat.getDateInstance(DateFormat.SHORT,new Locale("cs"))
-		val moreDaysLater = new Date(b.from.getTime + (Borrow.day * 60))
+		val moreDaysLater = new Date(b.from.getTime + (Borrow.day * Borrow.daysBorrow))
 		System.out.println(moreDaysLater.getTime.toString);
 		System.out.println(b.from.getTime.toString);
 		System.out.println(dateFormat.format(moreDaysLater))
@@ -200,9 +200,9 @@ za každý den z prodlení účtována částka 3,- na den, kterou pak
 pošleš na komunitní účet 1021034503/5500 spec. symbol 900
 					""",b.person.email);
 		val borrow = sem.find(classOf[Borrow],bor.id).get
-		ts.createTimer(new Date(System.currentTimeMillis + (Borrow.day * 60)),
+		ts.createTimer(new Date(System.currentTimeMillis + (Borrow.day * Borrow.daysBorrow)),
 							MyTuple(borrow.id,EmailType.warning))
-		ts.createTimer(new Date(System.currentTimeMillis + (Borrow.day * 53)),
+		ts.createTimer(new Date(System.currentTimeMillis + (Borrow.day * Borrow.daysFortnight)),
 							MyTuple(borrow.id,EmailType.fortnight))
 		Logger.getAnonymousLogger.severe("timers created")
 	}

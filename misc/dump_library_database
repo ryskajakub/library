@@ -1,0 +1,383 @@
+-- MySQL dump 10.13  Distrib 5.1.49, for debian-linux-gnu (x86_64)
+--
+-- Host: mysql    Database: jakubryska_name_glassfish
+-- ------------------------------------------------------
+-- Server version	5.0.51a-24+lenny5-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Not dumping tablespaces as no INFORMATION_SCHEMA.FILES table on this server
+--
+
+--
+-- Table structure for table `Author`
+--
+
+DROP TABLE IF EXISTS `Author`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Author` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Author`
+--
+
+LOCK TABLES `Author` WRITE;
+/*!40000 ALTER TABLE `Author` DISABLE KEYS */;
+INSERT INTO `Author` VALUES (65540,'Tulku Urgyen Rinpoche'),(3,'Čhögjal Namkhai Norbu'),(65539,'Dudjom Rinpoche'),(65538,' -'),(65537,'Martine Franck'),(65536,'Namcho Mingyur Dorje'),(65541,'Bernard Ducourant'),(65542,'Longchen Rabjam'),(65543,'Tulku Thondup'),(65544,'Dilgo Khjence Rinpočhe'),(65545,'Akong Tulku Rinpočhe'),(65546,'Lama A.Góvinda'),(65547,'J.S.Dalajlama'),(65548,'Shantideva'),(65549,'Tsepon W.D.Shakabpha'),(65550,'John F.Avedon'),(65551,'Dunjom Rinpoche'),(65552,'The Dzogchen Ponlop Rinpoche'),(65553,'Michael Carrithers'),(65554,'Lopon Tenzin Namdak'),(65555,'Shardza Tashi Gyaltsen'),(65556,'Patrick French'),(65557,'Tsoknyi Rinpoche'),(65558,'Sogjal Rimpočhe'),(65559,'Alexandra David-Neelová'),(65560,'Eduard Tomáš'),(65561,'Jamgon Kongtrul'),(65562,'Nyoshul Khenpo'),(65563,'Ajahn Sumedho'),(65564,'Andre van Lysebeth'),(65565,'Adžán Brahmavamso'),(65566,'Tatjana a Mirabai Blau'),(65567,'Robert Sahs'),(65568,'Jonah Winters'),(98304,'Nyagla Padma Dundul'),(98305,'Shense Lhaje'),(98306,'Longchenpa'),(131072,'Sakya Trizin'),(131073,'Lhundrub Tso'),(131074,'Adriano Clemente'),(163840,'C');
+/*!40000 ALTER TABLE `Author` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Book`
+--
+
+DROP TABLE IF EXISTS `Book`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Book` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Book`
+--
+
+LOCK TABLES `Book` WRITE;
+/*!40000 ALTER TABLE `Book` DISABLE KEYS */;
+INSERT INTO `Book` VALUES (1,'Nauky prvnotní moudrosti'),(5,'Křišťál a cesta světla'),(32768,'Zrcadlo 3/2007'),(32769,'Dzogčhen - dokonalý stav'),(65536,'Longsal Teachings volume 6'),(65537,'Longsal Teachings volume 3'),(65538,'Teachings on Yantra Yoga'),(65539,'The Starway To Liberation Instruction on Ngondro'),(65545,'The Interpretation of dreams'),(65546,'Key for consulting The Tibetan calendar'),(65547,'From The Depth of my Heart to my Mother'),(65548,'Namkha'),(65549,'Teachings on Schitro and Yangti'),(65550,'Kumar Kumari Yantra/for Children/'),(65551,'Longsal Teachings volume 2'),(65552,'Asiae'),(65553,'Teachings on Semde by Sodogpa'),(65554,'The Four Contemplations of the Dzogchen Semde'),(65555,'Longchenpa´s Precious Ship'),(65557,'Instructions on The Schort Thun '),(65558,'The Semdzin and The Syllable Phat'),(65559,'Songs from The Hospital'),(65560,'Crystal Mirror Volume 6'),(65561,'Svět tibetského buddhismu'),(65562,'The Precioys Vase SMS Base'),(65563,'Dzogchens Teaching of NNR'),(65564,'Commentary on the Nondro'),(65565,'The Nyingma School of Tibetan Budd'),(65566,'The Cycle of Day and Night'),(65567,'At it is'),(65568,'You Are the Eyes of the World/Longchenpa/'),(65569,'Klíče k dokonalému štěstí'),(65570,'The Practice of Dzogchen'),(65571,'An Introduction to the Practise of Contemplation'),(65572,'Teachings on Semde by Sodogpa Lodro Gyaltsen'),(65573,'Teachings on Lojongs,Rushens and Semdzins'),(65574,'The Real Meaning of Integration Educating'),(65575,'Two Dzogchens Texts'),(65576,'Arte Sacra Tibetana'),(65577,'The Mirror Advice on The Presence of Awareness '),(65580,'The Practice of tibetan Kunye Massage'),(65581,'Longsal Teachings volume 4'),(65582,'Dream Yoga and the Practise of Natural Light'),(65583,'Masters of Meditation and Miracles'),(65584,'The Golden Letters'),(65585,'Self - Liberation'),(65587,'Rady mistra Zrozeného z lotosu'),(65588,'Poklad v srdci probuzených'),(65589,'Krocení tygra'),(65590,'Základy tibetské mystiky'),(65591,'The Buddhism of Tibet'),(65592,'Kindness,Clarity and Insight'),(65593,'A Guide the Bodhisattvas way of life'),(65594,'Tibet :  A  Political History'),(65595,'In Exile from the Land of Snows'),(65596,'Wellsprings of the Great Perfection'),(65597,'The Tibetan BOOK of the Dead'),(65598,'Deities and Divinities of Tibet'),(65599,'Penetrating Wisdom'),(65600,'Buddha'),(65601,'The Vajra Garland The Lotus Garden'),(65602,'Bonpo Dzogchen Teachings'),(65603,'The Stages of A-Khrid Meditation'),(65604,'The Four-Themed Precious Garland'),(65605,'Chán Geser vládca desiatich svetových strán'),(65606,'Heart Drops of Dharmakaya'),(65607,'Primodial Experience/Manjusrimitra'),(65608,'Kumar Kumari Yantra/for Children'),(65609,'Himalaya'),(65610,'Tibet,Tibet/Historie ztracené země'),(65611,'Slova mého srdce'),(65612,'Carefree Dignity'),(65613,'Hidden Teachings of Tibet'),(65614,'Nepal Lonely Planet'),(65615,'Tibetan Autonomy and Self-Covernment:Myth..'),(65616,'Options for Tibet´s Future Political status'),(65618,'Government Resolutions and International..'),(65619,'Nobel Peace Prize Award Ceremony 1989'),(65620,'A Human Approach to World Peace'),(65621,'Úvod do buddhismu'),(65622,'India Lonely Planet'),(65623,'Tibetská kniha o životě a smrti'),(65624,'Tibetská kniha mrtvých'),(65625,'Přirozenost Buddhy'),(65626,'Otevřené srdce'),(65627,'Světy v harmonii'),(65628,'thondup'),(65629,'Mipam Lama s paterou Moudrostí'),(65630,'The Precious Treasury of the Way of'),(65631,'Winsdom:Two Buddhist Commentaries'),(65633,'999 otázek a odpovědí na cestě poznání'),(65634,'As it is v.2'),(65635,'A Treasure trove of Scriptural Transmission'),(65636,'Systems of Buddhist Tantra'),(65637,'A Marvelous Garland of Rare Gems'),(65640,'Frameworks of Buddhist Philosophy'),(65641,'Blazing Splendor'),(65642,'The Ri-Me Philosophy'),(65643,'On Birth,Life and Death'),(65644,'Opening the Eye of New Awareness'),(65645,'Four Essential Buddhist Commentaries'),(65646,'Universal Responsibility and the good Heart'),(65647,'Teachings of CNN'),(65648,'The Great Path of Awakening'),(65649,'The Way It Is'),(65650,'Technika dechu Pránájáma'),(65651,'Nauky prvotní moudrosti'),(65652,'Jak šířit lásku'),(65653,'Vábení Kailásu Moderní povídky z Tibetu'),(65654,'Umírání a smrt z pohledu diamantové cesty'),(65655,'Jádro Buddhova učení'),(65656,'Buddhistické symboly'),(65657,'Zdraví pro život/Tajemství tibetské ájurvédy'),(65658,' Úvod do buddhismu'),(65659,'Journey Among the Tibetan Nomads'),(65660,'Thinking in Buddhism:Nagarjuna´s Middle Way '),(65662,'A buddhist Guide to the Power places..'),(65663,'Talks in Conway 1982-1983 v.1'),(65664,'Dzogchen Teachings book 2'),(65665,'Dzogchen Teachings book 1'),(65666,'Dzogchens Teaching book 3'),(65667,'Ku Nye'),(65668,'The Song of Vajra'),(65670,'Commentary  on the Nondro'),(65671,'How to play the damaru in the Chod practise'),(65672,'The Book of Mudras'),(65673,'Longsal Teachings volume 5'),(65674,'Longsal Teachings volume 7'),(65676,'A Basic Grammar of Modern Spoken tibetan'),(65678,'Patience and Meditation from Schantideva´s'),(98304,'Vajrayana Preliminaries Brief Ngondro Practise'),(98305,'Preliminary Practise for the Longsal Cykle'),(98306,'Thos-grol'),(98308,'The External Rushen and the Purification ...'),(98309,'The Practice of Self-Liberation of the causes'),(98311,'Long-life practice and chudlen of N.P.Dundul'),(98312,'The Song of Energy'),(98313,'Songs of experience'),(98314,'Dance of the Vajra'),(98315,'Four Dzogchen Invocations'),(98316,'Yantra Yoga Manual'),(98317,'The Basic Yantras of 3,4,5 Series'),(98319,'An introduc. to the general principles of Y.Yoga'),(98320,'The practice of Long Life..Dakini Mandarava Cedrub'),(98321,'The Practice Of The Seven Semdzins'),(98322,'Longsal Thugthig of Jnanadhakkini'),(98323,'Preliminary Practise from the Longsal Cycle'),(98324,'The Seventh Lojong'),(98325,'Three Songs for Disciples of Changchub Dorje'),(98327,'Visionary Encouters and Dzogchen Teachings'),(98328,'Anniversary of Garab Dorje'),(98329,'Anniversary of Adzam Drugpa'),(98330,'The Guardians of the Teaching'),(98331,'The Practice of Lungta'),(98332,'Practice of Vajrapani'),(98333,'The Practice of Odzer Chenma'),(98334,'Jádro transcendentální moudrosti'),(98335,'Ganapuja'),(98336,'Avalotikesvara Khorwa Tongtrug'),(98337,'The Yoga of Arya Tara'),(98338,'The Vajra Armor'),(98339,'Chang-Chog of the Namcho Shitro'),(98340,'The Garuda Practice'),(98341,'The Practice for the Naga'),(98342,'The Practice...Dakini Mandarava'),(98343,'Mandarava Tsalung Practices'),(98344,'The Practice in Daily Life'),(98345,'Dzog Chen'),(98346,'The Short Thun as Daily Practice'),(98347,'Thirty Pieces of Advice from the Heart'),(98348,'Drajyor'),(98349,'The Root Upadesha on the Vajra Bridge of Longde'),(98350,'Sang Offering and Serkyem of the Eight Classes'),(98351,'The Song of the Vajra'),(98352,'Teachers´Training'),(98353,'Essential Notes on the Vajra Dance'),(98354,'The Life of Padmasambhava'),(98355,'The Origins of Tibetan Culture and Thought'),(98356,'..of Nagarjuna Clarifying the Core of Madhyamaka'),(98357,'An Introduction to the Practice of Contemplation'),(98358,'Dzogchen Teachings Tashigar South 2000-01'),(98360,'The Dzogchen Community'),(98361,'Mi Lam the Dream Practice'),(98363,'The Dzogchen State and the Semdzin with ..'),(98364,'Tun Drin/Medium Tun/'),(98365,'The Practice of Sinhamukha'),(98366,'Il vasoche esaudisce i desideri'),(98367,'Santi Mahá Sanghá'),(98368,'Mo A Tibetan Divination Method'),(98369,'Santi Maha Sangha Livello di base'),(98370,'Bodhicitta'),(98371,'The Necklase of Zi'),(98372,'Dzogchen Teachings Austria 1998'),(98373,'The Dakinis'),(131072,'The 21 Semzin of Dzog-chen Upadesa'),(131073,'Parting from the four Attachments'),(131074,'the Great History of Garab Dorje,Manjushrimitra...'),(131075,'A Brief Biography of Adzam Drugpa'),(131076,'Chod'),(131077,'The Sgra Bla Gods of the Ancestors '),(131078,'The Mirror'),(131079,'Čo'),(131080,'Tun'),(131081,'Santi mahá sangha pro chlapce a dívky'),(131082,'Mo Tibetská metoda věštění'),(131084,'Zrcadlo 2/2007'),(131085,'Zrcadlo 1/2006'),(131086,'Zrcadlo 2/2004'),(131087,'Zrcadlo 1/2005'),(131088,'Zrcadlo 2/2002'),(131089,'Zrcadlo 4/2003'),(131090,'Zrcadlo 1/2004'),(131091,'Pravý význam integrace'),(131092,'Opoutání od čtyř lpění'),(131093,'Čtyři uvědomění'),(131094,'Píseň energie přirozené podstaty existence'),(131095,'Avalókitéšvara Khorwa Tongtrug'),(131096,'Štyri dzogčhenové invokácie'),(131097,'Vnější,vnitřní a tajný rušen'),(131098,'Hlas včely'),(131099,'Sangčo Obětování sangu Praxe Lungta'),(131100,'Ozer Čhenma'),(131101,'Ochránci & Dákiní'),(131102,'Dzogčhen a zen'),(131103,'Praxe pro Nágy'),(131104,'Prax Vadžrapániho'),(131105,'Praxe Garudy'),(131106,'Vzácná váza kapitola 4.'),(131107,'Vzácná váza kapitola 3.'),(131108,'Praxe dlouhého života...Mandarávy'),(131109,'Praxe dlouhého života a čudlen'),(131110,'Malá píseň'),(163840,'Essence ot the three statements'),(163841,'The Total Space of Vajrasattva'),(163842,'Zernga'),(163844,'Tun drin (medium tun)'),(163846,'Now that I Come Die'),(163847,'Zrcadlo'),(163848,'Birth,Life and Death'),(163849,'Vesmír v jediném atomu'),(163850,'Healing with Fire');
+/*!40000 ALTER TABLE `Book` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `BookCopy`
+--
+
+DROP TABLE IF EXISTS `BookCopy`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `BookCopy` (
+  `id` bigint(20) NOT NULL,
+  `code` varchar(70) NOT NULL,
+  `returned_` smallint(6) NOT NULL,
+  `book_id` bigint(20) NOT NULL,
+  `library_id` bigint(20) default NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `code` (`code`),
+  KEY `FK7B4F261EDF8E46D` (`book_id`),
+  KEY `FK7B4F261E3E0087A7` (`library_id`),
+  KEY `FK7B4F261E60C45658` (`book_id`),
+  KEY `FK7B4F261E271E49DC` (`library_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BookCopy`
+--
+
+LOCK TABLES `BookCopy` WRITE;
+/*!40000 ALTER TABLE `BookCopy` DISABLE KEYS */;
+INSERT INTO `BookCopy` VALUES (131072,'0001',0,65536,1),(131073,'0002',0,65537,1),(131074,'0003',0,65538,1),(131075,'0004',0,65539,1),(131076,'0005',0,65545,1),(131077,'0006',0,65546,1),(131078,'0008',1,65546,1),(131079,'0009',0,65547,1),(131080,'0010',0,65548,1),(131081,'0011',0,65549,1),(131082,'0012',0,65550,1),(131083,'0013',0,65551,1),(131084,'0014',0,65552,1),(131085,'0015',0,65553,1),(131086,'0016',0,65554,1),(131087,'0017',0,65555,1),(131088,'0018',0,65557,1),(131089,'0019',0,65558,1),(131090,'0020',0,65559,1),(131091,'0021',0,65560,1),(131092,'0022',0,65561,1),(131093,'0023',0,65562,1),(131094,'0024',0,65563,1),(131095,'0025',0,65564,1),(131096,'0026',1,65565,1),(131097,'0027',0,65566,1),(131098,'0028',0,65567,1),(131099,'0029',0,65568,1),(131100,'0030',0,65569,1),(131101,'0031',0,65570,1),(131102,'0032',0,65571,1),(131103,'0033',0,65572,1),(131104,'0034',0,65573,1),(131105,'0035',0,65574,1),(131106,'0036',0,65575,1),(131107,'0037',0,65576,1),(131108,'0038',0,65577,1),(131109,'0039',0,65577,1),(131110,'0040',0,65580,1),(131111,'0041',0,65581,1),(131112,'0042',0,65582,1),(131113,'0043',0,65583,1),(131114,'0044',0,65584,1),(131115,'0045',0,65585,1),(131116,'0046',0,1,1),(131117,'0047',0,32768,1),(131118,'0048',0,65587,1),(131119,'0049',0,65588,1),(131120,'0050',0,65589,1),(131121,'0051',0,65590,1),(131122,'0052',0,65591,1),(131123,'0053',0,65592,1),(131124,'0054',0,65593,1),(131125,'0055',0,65594,1),(131126,'0056',0,65595,1),(131127,'0057',0,65596,1),(131128,'0058',0,65597,1),(131130,'0059',0,65598,1),(131131,'0060',0,65599,1),(131132,'0061',0,65600,1),(131133,'0062',0,65601,1),(131134,'0063',0,65602,1),(131135,'0064',0,65603,1),(131136,'0065',0,65604,1),(131137,'0066',0,65605,1),(131138,'0067',0,65606,1),(131139,'0068',0,65607,1),(131140,'0069',0,65608,1),(131141,'0070',0,65609,1),(131142,'0071',0,65610,1),(131143,'0072',0,65611,1),(131144,'0073',0,65612,1),(131145,'0074',0,65613,1),(131146,'0075',0,65614,1),(131147,'0076',0,65615,1),(131148,'0077',0,65616,1),(131149,'0078',0,65618,1),(131150,'0079',0,65619,1),(131151,'0080',0,65620,1),(131152,'0081',0,65621,1),(131153,'0082',0,65622,1),(131154,'0083',0,65623,1),(131155,'0084',0,65624,1),(131156,'0085',0,65625,1),(131157,'0086',0,65626,1),(131158,'0087',0,65627,1),(131159,'0088',0,65629,1),(131160,'0089',0,65630,1),(131161,'0090',0,65631,1),(131162,'0091',0,65582,1),(131163,'0092',0,65633,1),(131164,'0093',0,65634,1),(131165,'0094',0,65635,1),(131166,'0095',0,65636,1),(131167,'0096',0,65637,1),(131168,'0098',0,65640,1),(131169,'0097',0,65641,1),(131170,'0099',0,65642,1),(131171,'0100',0,65643,1),(131172,'0101',0,65644,1),(131173,'0102',0,65645,1),(131174,'0103',0,65646,1),(131175,'0104',0,65647,1),(131176,'0105',0,65648,1),(131177,'0106',0,65649,1),(131179,'0107',0,65650,1),(131180,'0108',0,65651,1),(131181,'0109',0,65652,1),(131182,'0110',0,65653,1),(131183,'0111',0,65654,1),(131184,'0112',0,65655,1),(131185,'0113',0,65656,1),(131186,'0114',0,65657,1),(131187,'0115',0,65658,1),(131188,'0116',0,65659,1),(131189,'0117',0,65660,1),(131190,'0118',0,65662,1),(131191,'0119',0,65663,1),(131192,'0120',0,65664,1),(131193,'0121',0,65665,1),(131194,'0122',0,65666,1),(131195,'0123',0,65667,1),(131196,'0124',0,65668,1),(131197,'0125',0,65668,1),(131198,'0126',0,65564,1),(131199,'0127',0,65670,1),(131200,'0128',0,65671,1),(131201,'0129',0,65672,1),(131202,'0130',0,65672,1),(131203,'0131',0,65672,1),(131204,'0132',0,65673,1),(131205,'0133',0,65674,1),(131206,'0134',0,65609,1),(131207,'0135',0,65676,1),(131208,'0136',0,32768,1),(131209,'0137',0,65678,1),(163840,'0181',0,98304,1),(163841,'0182',0,98305,1),(163842,'0179',0,98306,1),(163843,'0180',0,98308,1),(163845,'0175',0,98309,1),(163847,'0176',0,98311,1),(163848,'0166',0,98312,1),(163849,'0159',0,98313,1),(163850,'0177',0,98314,1),(163851,'0178',0,98315,1),(163852,'0171',0,98316,1),(163853,'0172',0,98317,1),(163854,'0173',0,98319,1),(163855,'0174',0,98320,1),(163856,'0167',0,98320,1),(163857,'0168',0,98321,1),(163858,'0169',0,98321,1),(163859,'0170',0,98322,1),(163860,'0163',0,98305,1),(163861,'0164',0,98324,1),(163862,'0165',0,98325,1),(163863,'0149',0,98327,1),(163864,'0143',0,98328,1),(163865,'0150',0,98329,1),(163866,'0144',0,98330,1),(163867,'0145',0,98331,1),(163868,'0146',0,98333,1),(163869,'0140',0,98333,1),(163870,'0141',0,98332,1),(163871,'0142',0,98331,1),(163872,'0139',0,98332,1),(163873,'0138',0,98334,1),(163874,'0157',0,98320,1),(163875,'0158',0,98335,1),(163876,'0160',0,98336,1),(163877,'0161',0,98336,1),(163878,'0162',0,98337,1),(163879,'0155',0,98337,1),(163880,'0156',0,98335,1),(163881,'0147',0,98338,1),(163882,'0154',0,98339,1),(163883,'0153',0,65554,1),(163884,'0152',0,98340,1),(163885,'0151',0,98335,1),(163886,'0148',0,98341,1),(163887,'0220',0,98342,1),(163888,'0219',0,98342,1),(163889,'0218',0,98342,1),(163890,'0216',0,98342,1),(163891,'0217',0,98343,1),(163892,'0215',0,98344,1),(163893,'0214',0,98309,1),(163894,'0213',0,65670,1),(163895,'0210',0,98345,1),(163896,'0211',0,98346,1),(163897,'0212',0,98347,1),(163898,'0207',0,98348,1),(163899,'0208',0,98349,1),(163900,'0209',0,98350,1),(163901,'0205',0,98351,1),(163902,'0206',0,98352,1),(163903,'0202',0,98353,1),(163904,'0203',0,98354,1),(163905,'0204',0,98355,1),(163906,'0199',0,98356,1),(163907,'0200',0,65571,1),(163908,'0201',0,98358,1),(163909,'0189',0,65566,1),(163910,'0185',0,98360,1),(163911,'0186',0,98360,1),(163912,'0184',0,98360,1),(163913,'0188',0,98361,1),(163914,'0187',0,98363,1),(163915,'0192',0,98364,1),(163916,'0191',0,98365,1),(163917,'0190',0,98366,1),(163918,'0195',0,98367,1),(163919,'0194',0,98368,1),(163920,'0193',0,98369,1),(163921,'0198',0,98370,1),(163922,'0197',0,98371,1),(163923,'0196',0,98372,1),(163924,'0183',1,65658,1),(163925,'0221',0,98373,1),(196608,'0224',0,131072,1),(196609,'0222',0,131073,1),(196610,'0226',0,131074,1),(196611,'0225',0,131075,1),(196612,'0228',0,131075,1),(196613,'0229',0,131076,1),(196614,'0227',0,131077,1),(196615,'0230',0,131077,1),(196616,'0233',0,131078,1),(196617,'0232',0,131079,1),(196618,'0231',0,131080,1),(196619,'0235',0,131081,1),(196620,'0234',0,131082,1),(196621,'0238',0,32768,1),(196622,'0237',0,131084,1),(196625,'0236',0,131085,1),(196626,'0242',0,131086,1),(196627,'0241',0,131087,1),(196628,'0240',0,131088,1),(196629,'0239',0,131089,1),(196630,'0245',0,131090,1),(196631,'0244',0,131091,1),(196632,'0243',0,131092,1),(196633,'0249',0,131093,1),(196634,'0248',0,131094,1),(196635,'0247',0,131095,1),(196636,'0246',0,131096,1),(196637,'0253',0,131096,1),(196638,'0252',0,131097,1),(196639,'0251',0,131098,1),(196640,'0250',0,131099,1),(196641,'0257',0,131100,1),(196643,'0256',0,131101,1),(196644,'0255',0,131102,1),(196645,'0254',0,131103,1),(196646,'0261',0,131104,1),(196647,'0260',0,131105,1),(196648,'0259',0,131106,1),(196649,'0258',0,131107,1),(196650,'0265',0,131108,1),(196651,'0264',0,131108,1),(196652,'0263',0,131108,1),(196653,'0262',0,131109,1),(196654,'0266',0,131110,1),(229376,'0267',0,163840,1),(229377,'0268',0,163841,1),(229378,'0269',0,163842,1),(229379,'0270',0,65587,1),(229380,'0271',0,163844,1),(229381,'0272',0,131080,1),(229382,'0273',0,163846,1),(229383,'0274',0,163847,1),(229384,'0275',0,163848,1),(229385,'0276',0,5,1),(229386,'0277',0,163842,1),(229387,'0278',0,163842,1),(229388,'0279',0,163849,1),(229389,'0280',0,163850,1),(229390,'0281',0,65566,1),(229391,'0282',0,65566,1);
+/*!40000 ALTER TABLE `BookCopy` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Book_Author`
+--
+
+DROP TABLE IF EXISTS `Book_Author`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Book_Author` (
+  `books_id` bigint(20) NOT NULL,
+  `authors_id` bigint(20) NOT NULL,
+  PRIMARY KEY  (`books_id`,`authors_id`),
+  KEY `FK1A9A0FA19FD97C90` (`authors_id`),
+  KEY `FK1A9A0FA181A8590C` (`books_id`),
+  KEY `FK1A9A0FA16D901FBB` (`authors_id`),
+  KEY `FK1A9A0FA1D473CAF7` (`books_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Book_Author`
+--
+
+LOCK TABLES `Book_Author` WRITE;
+/*!40000 ALTER TABLE `Book_Author` DISABLE KEYS */;
+INSERT INTO `Book_Author` VALUES (1,3),(5,3),(32768,65538),(32769,3),(65536,3),(65537,3),(65538,3),(65539,3),(65545,65536),(65546,3),(65547,3),(65548,3),(65549,3),(65550,3),(65551,3),(65552,65537),(65553,3),(65554,3),(65555,3),(65557,3),(65558,3),(65559,3),(65560,65538),(65561,65538),(65562,3),(65563,3),(65564,3),(65565,65539),(65566,3),(65567,65540),(65568,3),(65569,65541),(65570,65542),(65571,3),(65572,3),(65573,3),(65574,3),(65575,65538),(65576,65538),(65577,3),(65580,3),(65581,3),(65582,3),(65583,65543),(65584,3),(65585,3),(65587,65538),(65588,65544),(65589,65545),(65590,65546),(65591,65547),(65592,65547),(65593,65548),(65594,65549),(65595,65550),(65596,65538),(65597,65547),(65598,65551),(65599,65552),(65600,65553),(65601,65538),(65602,65554),(65603,65538),(65604,65539),(65605,65538),(65606,65555),(65607,3),(65608,3),(65609,65538),(65610,65556),(65611,65539),(65612,65557),(65613,65543),(65614,65538),(65615,65538),(65616,65538),(65618,65538),(65619,65538),(65620,65547),(65621,65547),(65622,65538),(65623,65558),(65624,65538),(65625,65547),(65626,65547),(65627,65547),(65628,65536),(65629,65559),(65630,65542),(65631,65538),(65633,65560),(65634,65540),(65635,65538),(65636,65561),(65637,65562),(65640,65561),(65641,65540),(65642,65561),(65643,3),(65644,65547),(65645,65547),(65646,65547),(65647,65538),(65648,65561),(65649,65563),(65650,65564),(65651,3),(65652,65547),(65653,65538),(65654,65538),(65655,65565),(65656,65566),(65657,65567),(65658,65547),(65659,3),(65660,65568),(65662,65538),(65663,3),(65664,3),(65665,3),(65666,3),(65667,65538),(65668,3),(65670,3),(65671,3),(65672,3),(65673,3),(65674,3),(65676,65538),(65678,65538),(98304,65538),(98305,3),(98306,3),(98308,3),(98309,3),(98311,3),(98312,98304),(98313,98304),(98314,65538),(98315,65538),(98316,3),(98317,3),(98319,3),(98320,3),(98321,3),(98322,3),(98323,3),(98324,3),(98325,3),(98327,98305),(98328,3),(98329,3),(98330,3),(98331,3),(98332,3),(98333,3),(98334,65538),(98335,3),(98336,3),(98337,3),(98338,3),(98339,3),(98340,3),(98341,3),(98342,3),(98343,3),(98344,3),(98345,3),(98346,3),(98347,98306),(98348,3),(98349,3),(98350,3),(98351,3),(98352,3),(98353,3),(98354,65538),(98355,3),(98356,3),(98357,3),(98358,3),(98360,3),(98361,3),(98363,3),(98364,3),(98365,3),(98366,3),(98367,3),(98368,3),(98369,3),(98370,3),(98371,3),(98372,3),(98373,3),(131072,3),(131073,131072),(131074,65538),(131075,131073),(131076,3),(131077,3),(131078,3),(131079,3),(131080,3),(131081,3),(131082,3),(131084,65538),(131085,65538),(131086,65538),(131087,65538),(131088,65538),(131089,65538),(131090,65538),(131091,3),(131092,131072),(131093,3),(131094,98304),(131095,3),(131096,3),(131097,3),(131098,3),(131099,3),(131100,3),(131101,3),(131102,3),(131103,3),(131104,3),(131105,3),(131106,3),(131107,3),(131108,3),(131109,3),(131110,3),(163840,3),(163841,163840),(163842,3),(163844,3),(163846,98306),(163847,3),(163848,3),(163849,65547),(163850,3);
+/*!40000 ALTER TABLE `Book_Author` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Book_Tag`
+--
+
+DROP TABLE IF EXISTS `Book_Tag`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Book_Tag` (
+  `books_id` bigint(20) NOT NULL,
+  `tags_id` bigint(20) NOT NULL,
+  PRIMARY KEY  (`books_id`,`tags_id`),
+  KEY `FK7B5B7944DDDC5CE8` (`tags_id`),
+  KEY `FK7B5B794481A8590C` (`books_id`),
+  KEY `FK7B5B79449635819D` (`tags_id`),
+  KEY `FK7B5B7944D473CAF7` (`books_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Book_Tag`
+--
+
+LOCK TABLES `Book_Tag` WRITE;
+/*!40000 ALTER TABLE `Book_Tag` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Book_Tag` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Borrow`
+--
+
+DROP TABLE IF EXISTS `Borrow`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Borrow` (
+  `id` bigint(20) NOT NULL,
+  `from_` date NOT NULL,
+  `realTo` date default NULL,
+  `bookCopy_id` bigint(20) NOT NULL,
+  `person_id` bigint(20) NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `FK76F1961544D9742D` (`person_id`),
+  KEY `FK76F19615C3BE96ED` (`bookCopy_id`),
+  KEY `FK76F1961512901758` (`person_id`),
+  KEY `FK76F19615FE591B58` (`bookCopy_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Borrow`
+--
+
+LOCK TABLES `Borrow` WRITE;
+/*!40000 ALTER TABLE `Borrow` DISABLE KEYS */;
+INSERT INTO `Borrow` VALUES (98304,'2012-01-18',NULL,229389,1),(98305,'2012-01-18',NULL,163893,98304),(98306,'2012-01-21',NULL,229390,98305),(98307,'2012-01-21',NULL,229391,98305),(131072,'2012-02-01','2012-02-01',131119,1),(131073,'2012-02-01','2012-02-01',131119,131073),(131074,'2012-02-01',NULL,131080,131074),(131075,'2012-02-03',NULL,163881,131075),(131076,'2012-02-05',NULL,131086,131076),(131077,'2012-02-05',NULL,163845,131076),(131078,'2012-02-05',NULL,163892,131076),(131079,'2012-02-05',NULL,131081,131076);
+/*!40000 ALTER TABLE `Borrow` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Librarian`
+--
+
+DROP TABLE IF EXISTS `Librarian`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Librarian` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `canDelete_` smallint(6) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Librarian`
+--
+
+LOCK TABLES `Librarian` WRITE;
+/*!40000 ALTER TABLE `Librarian` DISABLE KEYS */;
+INSERT INTO `Librarian` VALUES (65540,'JirinaV',0,'DW/yhLzIMMgapTXoR2oWbzl1L8dcVFaJJJ5wNyTCHD0='),(65541,'Magda',0,'HxS1JTF6FPqV/cbJvF+oZ8epVOe+kvDOpdZUQZzy9MM='),(65542,'Nikol',0,'jBANHDDE05tSgOVmh/TKsibFkF2rWQCZQcyBqMp2kQI='),(65543,'JirinaS',0,'iDQ1DX/pZB81sv5UyCGTfvXMDX/OX/mMLpLs1u4blLU='),(65544,'Kuba',0,'6mJjmzMV2ln+skMihTEHIm7XwOCOqvIC3ZWBouWJaHg='),(65545,'Ondra',0,'c7STnWXRhRKvCF3BaD996j/HGVuGKU2DSuv3HyOwRUU=');
+/*!40000 ALTER TABLE `Librarian` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `LibrarianAction`
+--
+
+DROP TABLE IF EXISTS `LibrarianAction`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `LibrarianAction` (
+  `id` bigint(20) NOT NULL,
+  `actionType` varchar(255) default NULL,
+  `date` date default NULL,
+  `description` varchar(255) default NULL,
+  `librarian_id` bigint(20) default NULL,
+  PRIMARY KEY  (`id`),
+  KEY `FK9BA0E24EA4CDEF47` (`librarian_id`),
+  KEY `FK9BA0E24EBD83F83C` (`librarian_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `LibrarianAction`
+--
+
+LOCK TABLES `LibrarianAction` WRITE;
+/*!40000 ALTER TABLE `LibrarianAction` DISABLE KEYS */;
+INSERT INTO `LibrarianAction` VALUES (163840,'Person Changed','2011-07-07','32768',65540),(163841,'Book Created','2011-07-07','65536',65540),(163842,'Book Copy Created','2011-07-07','131072',NULL),(163843,'Book Created','2011-07-07','65537',65540),(163844,'Book Created','2011-07-07','65538',65540),(163845,'Book Created','2011-07-07','65539',65540),(163846,'Book Created','2011-07-07','65539',65540),(163847,'Author Created','2011-07-07','65536',65540),(163848,'Book Copy Created','2011-07-07','131073',NULL),(163849,'Book Copy Created','2011-07-07','131074',NULL),(163850,'Book Copy Created','2011-07-07','131075',NULL),(163851,'Book Created','2011-07-07','65545',65540),(163852,'Book Copy Created','2011-07-07','131076',NULL),(163853,'Book Created','2011-07-07','65546',65540),(163854,'Book Copy Created','2011-07-07','131077',NULL),(163855,'Book Created','2011-07-07','65547',65540),(163856,'Book Changed','2011-07-07','65547',65540),(163857,'Book Changed','2011-07-07','65547',65540),(163858,'Book Changed','2011-07-07','65547',65540),(163859,'Book Copy Created','2011-07-07','131078',NULL),(163860,'Book Returned to Publisher','2011-07-07','131078 Code:0008',65540),(163861,'Book Changed','2011-07-07','65547',65540),(163862,'Book Changed','2011-07-07','65547',65540),(163863,'Book Copy Created','2011-07-07','131079',NULL),(163864,'Book Created','2011-07-08','65548',65540),(163865,'Book Copy Created','2011-07-08','131080',NULL),(163866,'Book Created','2011-07-08','65549',65540),(163867,'Book Copy Created','2011-07-08','131081',NULL),(163868,'Book Created','2011-07-08','65550',65540),(163869,'Book Copy Created','2011-07-08','131082',NULL),(163870,'Book Created','2011-07-08','65551',65540),(163871,'Book Copy Created','2011-07-08','131083',NULL),(163872,'Book Changed','2011-07-08','65551',65540),(163873,'Author Created','2011-07-08','65537',65540),(163874,'Book Created','2011-07-08','65552',65540),(163875,'Book Copy Created','2011-07-08','131084',NULL),(163876,'Book Created','2011-07-08','65553',65540),(163877,'Book Copy Created','2011-07-08','131085',NULL),(163878,'Book Created','2011-07-08','65554',65540),(163879,'Book Copy Created','2011-07-08','131086',NULL),(163880,'Book Created','2011-07-08','65555',65540),(163881,'Book Copy Created','2011-07-08','131087',NULL),(163882,'Book Created','2011-07-08','65557',65540),(163883,'Book Copy Created','2011-07-08','131088',NULL),(163884,'Book Created','2011-07-08','65558',65540),(163885,'Book Copy Created','2011-07-08','131089',NULL),(163886,'Book Created','2011-07-08','65559',65540),(163887,'Book Copy Created','2011-07-08','131090',NULL),(163888,'Author Created','2011-07-08','65538',65540),(163889,'Book Created','2011-07-08','65560',65540),(163890,'Book Copy Created','2011-07-08','131091',NULL),(163891,'Book Created','2011-07-08','65561',65540),(163892,'Book Copy Created','2011-07-08','131092',NULL),(163893,'Book Created','2011-07-08','65562',65540),(163894,'Book Copy Created','2011-07-08','131093',NULL),(163895,'Book Created','2011-07-08','65563',65540),(163896,'Book Copy Created','2011-07-08','131094',NULL),(163897,'Book Created','2011-07-08','65564',65540),(163898,'Book Copy Created','2011-07-08','131095',NULL),(163899,'Author Created','2011-07-08','65539',65540),(163900,'Book Created','2011-07-08','65565',65540),(163901,'Book Copy Created','2011-07-08','131096',NULL),(163902,'Book Created','2011-07-08','65566',65540),(163903,'Book Copy Created','2011-07-08','131097',NULL),(163904,'Author Created','2011-07-08','65540',65540),(163905,'Book Created','2011-07-08','65567',65540),(163906,'Book Copy Created','2011-07-08','131098',NULL),(163907,'Book Created','2011-07-08','65568',65540),(163908,'Book Copy Created','2011-07-08','131099',NULL),(163909,'Author Created','2011-07-08','65541',65540),(163910,'Book Created','2011-07-08','65569',65540),(163911,'Book Copy Created','2011-07-08','131100',NULL),(163912,'Author Created','2011-07-08','65542',65540),(163913,'Book Created','2011-07-08','65570',65540),(163914,'Book Copy Created','2011-07-08','131101',NULL),(163915,'Book Created','2011-07-08','65571',65540),(163916,'Book Copy Created','2011-07-08','131102',NULL),(163917,'Book Created','2011-07-08','65572',65540),(163918,'Book Copy Created','2011-07-08','131103',NULL),(163919,'Book Created','2011-07-08','65573',65540),(163920,'Book Copy Created','2011-07-08','131104',NULL),(163921,'Book Created','2011-07-08','65574',65540),(163922,'Book Copy Created','2011-07-08','131105',NULL),(163923,'Book Created','2011-07-08','65575',65540),(163924,'Book Copy Created','2011-07-08','131106',NULL),(163925,'Book Created','2011-07-08','65576',65540),(163926,'Book Copy Created','2011-07-08','131107',NULL),(163927,'Book Created','2011-07-08','65577',65540),(163928,'Book Copy Created','2011-07-08','131108',NULL),(163929,'Book Changed','2011-07-08','65577',65540),(163930,'Book Created','2011-07-08','65577',65540),(163931,'Book Created','2011-07-08','65577',65540),(163932,'Book Copy Created','2011-07-08','131109',NULL),(163933,'Book Changed','2011-07-08','65577',65540),(163934,'Book Created','2011-07-08','65580',65540),(163935,'Book Copy Created','2011-07-08','131110',NULL),(163936,'Book Created','2011-07-08','65581',65540),(163937,'Book Copy Created','2011-07-08','131111',NULL),(163938,'Book Changed','2011-07-08','65581',65540),(163939,'Book Created','2011-07-12','65582',65540),(163940,'Book Copy Created','2011-07-12','131112',NULL),(163941,'Book Changed','2011-07-12','65582',65540),(163942,'Author Created','2011-07-12','65543',65540),(163943,'Book Changed','2011-07-12','65582',65540),(163944,'Book Created','2011-07-12','65583',65540),(163945,'Book Copy Created','2011-07-12','131113',NULL),(163946,'Book Created','2011-07-12','65584',65540),(163947,'Book Copy Created','2011-07-12','131114',NULL),(163948,'Book Created','2011-07-12','65585',65540),(163949,'Book Copy Created','2011-07-12','131115',NULL),(163950,'Book Copy Created','2011-07-12','131116',NULL),(163951,'Book Created','2011-07-12','32768',65540),(163952,'Book Copy Created','2011-07-12','131117',NULL),(163953,'Book Created','2011-07-12','65587',65540),(163954,'Book Copy Created','2011-07-12','131118',NULL),(163955,'Author Created','2011-07-12','65544',65540),(163956,'Book Created','2011-07-12','65588',65540),(163957,'Book Copy Created','2011-07-12','131119',NULL),(163958,'Author Created','2011-07-12','65545',65540),(163959,'Book Created','2011-07-12','65589',65540),(163960,'Book Copy Created','2011-07-12','131120',NULL),(163961,'Author Created','2011-07-12','65546',65540),(163962,'Book Created','2011-07-12','65590',65540),(163963,'Book Copy Created','2011-07-12','131121',NULL),(163964,'Author Created','2011-07-12','65547',65540),(163965,'Book Created','2011-07-12','65591',65540),(163966,'Book Copy Created','2011-07-12','131122',NULL),(163967,'Book Created','2011-07-12','65592',65540),(163968,'Book Copy Created','2011-07-12','131123',NULL),(163969,'Author Created','2011-07-12','65548',65540),(163970,'Book Created','2011-07-12','65593',65540),(163971,'Book Copy Created','2011-07-12','131124',NULL),(163972,'Author Created','2011-07-12','65549',65540),(163973,'Book Created','2011-07-12','65594',65540),(163974,'Book Copy Created','2011-07-12','131125',NULL),(163975,'Author Created','2011-07-12','65550',65540),(163976,'Book Created','2011-07-12','65595',65540),(163977,'Book Copy Created','2011-07-12','131126',NULL),(163978,'Book Created','2011-07-12','65596',65540),(163979,'Book Copy Created','2011-07-12','131127',NULL),(163980,'Book Created','2011-07-12','65597',65540),(163981,'Book Copy Created','2011-07-12','131128',NULL),(163982,'Book Copy Created','2011-07-12','131128',NULL),(163983,'Book Created','2011-07-12','65598',65540),(163984,'Book Returned to Publisher','2011-07-12','131096 Code:0026',65540),(163985,'Author Created','2011-07-12','65551',65540),(163986,'Book Changed','2011-07-12','65598',65540),(163987,'Book Copy Created','2011-07-12','131130',NULL),(163988,'Book Changed','2011-07-12','65598',65540),(163989,'Author Created','2011-07-12','65552',65540),(163990,'Book Created','2011-07-12','65599',65540),(163991,'Book Copy Created','2011-07-12','131131',NULL),(163992,'Author Created','2011-07-12','65553',65540),(163993,'Book Created','2011-07-12','65600',65540),(163994,'Book Copy Created','2011-07-12','131132',NULL),(163995,'Book Created','2011-07-12','65601',65540),(163996,'Book Copy Created','2011-07-12','131133',NULL),(163997,'Author Created','2011-07-12','65554',65540),(163998,'Book Created','2011-07-12','65602',65540),(163999,'Book Copy Created','2011-07-12','131134',NULL),(164000,'Book Created','2011-07-12','65603',65540),(164001,'Book Copy Created','2011-07-12','131135',NULL),(164002,'Book Created','2011-07-12','65604',65540),(164003,'Book Copy Created','2011-07-12','131136',NULL),(164004,'Book Created','2011-07-12','65605',65540),(164005,'Book Copy Created','2011-07-12','131137',NULL),(164006,'Book Created','2011-07-12','65606',65540),(164007,'Book Copy Created','2011-07-12','131138',NULL),(164008,'Author Created','2011-07-12','65555',65540),(164009,'Book Changed','2011-07-12','65606',65540),(164010,'Book Created','2011-07-12','65607',65540),(164011,'Book Copy Created','2011-07-12','131139',NULL),(164012,'Book Created','2011-07-12','65608',65540),(164013,'Book Copy Created','2011-07-12','131140',NULL),(164014,'Book Changed','2011-07-12','65608',65540),(164015,'Book Created','2011-07-12','65609',65540),(164016,'Book Copy Created','2011-07-12','131141',NULL),(164017,'Author Created','2011-07-12','65556',65540),(164018,'Book Created','2011-07-12','65610',65540),(164019,'Book Copy Created','2011-07-12','131142',NULL),(164020,'Book Created','2011-07-12','65611',65540),(164021,'Book Copy Created','2011-07-12','131143',NULL),(164022,'Author Created','2011-07-12','65557',65540),(164023,'Book Created','2011-07-12','65612',65540),(164024,'Book Copy Created','2011-07-12','131144',NULL),(164025,'Book Created','2011-07-12','65613',65540),(164026,'Book Copy Created','2011-07-12','131145',NULL),(164027,'Book Created','2011-07-12','65614',65540),(164028,'Book Copy Created','2011-07-12','131146',NULL),(164029,'Book Created','2011-07-12','65615',65540),(164030,'Book Copy Created','2011-07-12','131147',NULL),(164031,'Book Created','2011-07-12','65616',65540),(164032,'Book Copy Created','2011-07-12','131148',NULL),(164033,'Book Created','2011-07-12','65618',65540),(164034,'Book Copy Created','2011-07-12','131149',NULL),(164035,'Book Created','2011-07-12','65619',65540),(164036,'Book Copy Created','2011-07-12','131150',NULL),(164037,'Book Created','2011-07-12','65620',65540),(164038,'Book Copy Created','2011-07-12','131151',NULL),(164039,'Book Created','2011-07-12','65621',65540),(164040,'Book Copy Created','2011-07-12','131152',NULL),(164041,'Book Created','2011-07-12','65622',65540),(164042,'Book Copy Created','2011-07-12','131153',NULL),(164043,'Author Created','2011-07-12','65558',65540),(164044,'Book Created','2011-07-12','65623',65540),(164045,'Book Copy Created','2011-07-12','131154',NULL),(164046,'Book Created','2011-07-12','65624',65540),(164047,'Book Copy Created','2011-07-12','131155',NULL),(164048,'Book Created','2011-07-12','65625',65540),(164049,'Book Copy Created','2011-07-12','131156',NULL),(164050,'Book Created','2011-07-12','65626',65540),(164051,'Book Copy Created','2011-07-12','131157',NULL),(164052,'Book Created','2011-07-12','65627',65540),(164053,'Book Copy Created','2011-07-12','131158',NULL),(164054,'Book Changed','2011-07-12','65537',65540),(164055,'Book Changed','2011-07-12','65536',65540),(164056,'Book Changed','2011-07-12','65612',65540),(164057,'Book Created','2011-07-12','65628',65540),(164058,'Author Created','2011-07-13','65559',65540),(164059,'Book Created','2011-07-13','65629',65540),(164060,'Book Copy Created','2011-07-13','131159',NULL),(164061,'Book Created','2011-07-13','65630',65540),(164062,'Book Copy Created','2011-07-13','131160',NULL),(164063,'Book Created','2011-07-13','65631',65540),(164064,'Book Copy Created','2011-07-13','131161',NULL),(164065,'Book Created','2011-07-13','65582',65540),(164066,'Book Copy Created','2011-07-13','131162',NULL),(164067,'Author Created','2011-07-13','65560',65540),(164068,'Book Created','2011-07-13','65633',65540),(164069,'Book Copy Created','2011-07-13','131163',NULL),(164070,'Book Created','2011-07-13','65634',65540),(164071,'Book Copy Created','2011-07-13','131164',NULL),(164072,'Book Created','2011-07-13','65635',65540),(164073,'Book Copy Created','2011-07-13','131165',NULL),(164074,'Author Created','2011-07-13','65561',65540),(164075,'Book Created','2011-07-13','65636',65540),(164076,'Book Copy Created','2011-07-13','131166',NULL),(164077,'Author Created','2011-07-13','65562',65540),(164078,'Book Created','2011-07-13','65637',65540),(164079,'Book Copy Created','2011-07-13','131167',NULL),(164080,'Book Created','2011-07-13','65640',65540),(164081,'Book Copy Created','2011-07-13','131168',NULL),(164082,'Book Created','2011-07-13','65641',65540),(164083,'Book Copy Created','2011-07-13','131169',NULL),(164084,'Book Changed','2011-07-13','65636',65540),(164085,'Book Changed','2011-07-13','65636',65540),(164086,'Book Changed','2011-07-13','65640',65540),(164087,'Book Created','2011-07-13','65642',65540),(164088,'Book Copy Created','2011-07-13','131170',NULL),(164089,'Book Created','2011-07-13','65643',65540),(164090,'Book Copy Created','2011-07-13','131171',NULL),(164091,'Book Created','2011-07-13','65644',65540),(164092,'Book Copy Created','2011-07-13','131172',NULL),(164093,'Book Created','2011-07-13','65645',65540),(164094,'Book Copy Created','2011-07-13','131173',NULL),(164095,'Book Created','2011-07-13','65646',65540),(164096,'Book Copy Created','2011-07-13','131174',NULL),(164097,'Book Created','2011-07-13','65647',65540),(164098,'Book Copy Created','2011-07-13','131175',NULL),(164099,'Book Created','2011-07-13','65648',65540),(164100,'Book Copy Created','2011-07-13','131176',NULL),(164101,'Author Created','2011-07-13','65563',65540),(164102,'Book Created','2011-07-13','65649',65540),(164103,'Book Copy Created','2011-07-13','131177',NULL),(164104,'Author Created','2011-07-13','65564',65540),(164105,'Book Copy Created','2011-07-13','131177',NULL),(164106,'Book Created','2011-07-13','65650',65540),(164107,'Book Copy Created','2011-07-13','131179',NULL),(164108,'Book Created','2011-07-13','65651',65540),(164109,'Book Copy Created','2011-07-13','131180',NULL),(164110,'Book Changed','2011-07-13','65651',65540),(164111,'Book Created','2011-07-13','65652',65540),(164112,'Book Copy Created','2011-07-13','131181',NULL),(164113,'Book Created','2011-07-13','65653',65540),(164114,'Book Copy Created','2011-07-13','131182',NULL),(164115,'Book Created','2011-07-13','65654',65540),(164116,'Book Changed','2011-07-13','65654',65540),(164117,'Book Copy Created','2011-07-13','131183',NULL),(164118,'Author Created','2011-07-23','65565',65540),(164119,'Book Created','2011-07-23','65655',65540),(164120,'Book Copy Created','2011-07-23','131184',NULL),(164121,'Author Created','2011-07-23','65566',65540),(164122,'Book Created','2011-07-23','65656',65540),(164123,'Book Copy Created','2011-07-23','131185',NULL),(164124,'Author Created','2011-07-23','65567',65540),(164125,'Book Created','2011-07-23','65657',65540),(164126,'Book Copy Created','2011-07-23','131186',NULL),(164127,'Book Created','2011-07-23','65658',65540),(164128,'Book Copy Created','2011-07-23','131187',NULL),(164129,'Book Changed','2011-07-23','65621',65540),(164130,'Book Changed','2011-07-23','65621',65540),(164131,'Book Changed','2011-07-23','65621',65540),(164132,'Book Changed','2011-07-23','65621',65540),(164133,'Book Changed','2011-07-23','65658',65540),(164134,'Book Changed','2011-07-23','65621',65540),(164135,'Book Changed','2011-07-23','65658',65540),(164136,'Book Changed','2011-07-23','65658',65540),(164137,'Book Created','2011-07-23','65659',65540),(164138,'Book Copy Created','2011-07-23','131188',NULL),(164139,'Author Created','2011-07-23','65568',65540),(164140,'Book Created','2011-07-23','65660',65540),(164141,'Book Copy Created','2011-07-23','131189',NULL),(164142,'Book Created','2011-07-23','65662',65540),(164143,'Book Copy Created','2011-07-23','131190',NULL),(164144,'Book Created','2011-07-23','65663',65540),(164145,'Book Changed','2011-07-23','65663',65540),(164146,'Book Copy Created','2011-07-23','131191',NULL),(164147,'Book Created','2011-07-23','65664',65540),(164148,'Book Copy Created','2011-07-23','131192',NULL),(164149,'Book Created','2011-07-23','65665',65540),(164150,'Book Copy Created','2011-07-23','131193',NULL),(164151,'Book Created','2011-07-23','65666',65540),(164152,'Book Copy Created','2011-07-23','131194',NULL),(164153,'Book Created','2011-07-23','65667',65540),(164154,'Book Copy Created','2011-07-23','131195',NULL),(164155,'Book Created','2011-07-23','65668',65540),(164156,'Book Copy Created','2011-07-23','131196',NULL),(164157,'Book Copy Created','2011-07-23','131197',NULL),(164158,'Book Created','2011-07-23','65564',65540),(164159,'Book Copy Created','2011-07-23','131198',NULL),(164160,'Book Created','2011-07-23','65670',65540),(164161,'Book Copy Created','2011-07-23','131199',NULL),(164162,'Book Created','2011-07-23','65671',65540),(164163,'Book Copy Created','2011-07-23','131200',NULL),(164164,'Book Created','2011-07-23','65672',65540),(164165,'Book Copy Created','2011-07-23','131201',NULL),(164166,'Book Changed','2011-07-23','65672',65540),(164167,'Book Copy Created','2011-07-23','131202',NULL),(164168,'Book Copy Created','2011-07-23','131203',NULL),(164169,'Book Created','2011-07-23','65673',65540),(164170,'Book Copy Created','2011-07-23','131204',NULL),(164171,'Book Created','2011-07-23','65674',65540),(164172,'Book Copy Created','2011-07-23','131205',NULL),(164173,'Book Changed','2011-07-23','65674',65540),(164174,'Book Changed','2011-07-23','65673',65540),(164175,'Book Changed','2011-07-23','65673',65540),(164176,'Book Created','2011-07-23','65609',65540),(164177,'Book Copy Created','2011-07-23','131206',NULL),(164178,'Book Created','2011-07-23','65676',65540),(164179,'Book Copy Created','2011-07-23','131207',NULL),(164180,'Book Created','2011-07-23','32768',65540),(164181,'Book Copy Created','2011-07-23','131208',NULL),(164182,'Book Created','2011-07-23','65678',65540),(164183,'Book Copy Created','2011-07-23','131209',NULL),(196608,'Book Created','2011-07-25','98304',65540),(196609,'Book Copy Created','2011-07-25','163840',NULL),(196610,'Book Created','2011-07-25','98305',65540),(196611,'Book Copy Created','2011-07-25','163841',NULL),(196612,'Book Created','2011-07-25','98306',65540),(196613,'Book Copy Created','2011-07-25','163842',NULL),(196614,'Book Created','2011-07-25','98308',65540),(196615,'Book Copy Created','2011-07-25','163843',NULL),(196616,'Book Copy Created','2011-07-25','163843',NULL),(196617,'Book Created','2011-07-25','98309',65540),(196618,'Book Copy Created','2011-07-25','163845',NULL),(196619,'Book Copy Created','2011-07-25','163845',NULL),(196620,'Book Created','2011-07-25','98311',65540),(196621,'Book Copy Created','2011-07-25','163847',NULL),(196622,'Author Created','2011-07-25','98304',65540),(196623,'Book Created','2011-07-25','98312',65540),(196624,'Book Copy Created','2011-07-25','163848',NULL),(196625,'Book Created','2011-07-25','98313',65540),(196626,'Book Copy Created','2011-07-25','163849',NULL),(196627,'Book Created','2011-07-25','98314',65540),(196628,'Book Copy Created','2011-07-25','163850',NULL),(196629,'Book Created','2011-07-25','98315',65540),(196630,'Book Copy Created','2011-07-25','163851',NULL),(196631,'Book Created','2011-07-25','98316',65540),(196632,'Book Copy Created','2011-07-25','163852',NULL),(196633,'Book Created','2011-07-25','98317',65540),(196634,'Book Copy Created','2011-07-25','163853',NULL),(196635,'Book Created','2011-07-25','98319',65540),(196636,'Book Copy Created','2011-07-25','163854',NULL),(196637,'Book Changed','2011-07-25','98319',65540),(196638,'Book Created','2011-07-25','98320',65540),(196639,'Book Copy Created','2011-07-25','163855',NULL),(196640,'Book Changed','2011-07-25','98320',65540),(196641,'Book Copy Created','2011-07-25','163856',NULL),(196642,'Book Created','2011-07-25','98321',65540),(196643,'Book Copy Created','2011-07-25','163857',NULL),(196644,'Book Copy Created','2011-07-25','163858',NULL),(196645,'Book Created','2011-07-25','98322',65540),(196646,'Book Copy Created','2011-07-25','163859',NULL),(196647,'Book Created','2011-07-25','98323',65540),(196648,'Book Copy Created','2011-07-25','163860',NULL),(196649,'Book Created','2011-07-25','98324',65540),(196650,'Book Copy Created','2011-07-25','163861',NULL),(196651,'Book Created','2011-07-25','98325',65540),(196652,'Book Copy Created','2011-07-25','163862',NULL),(196653,'Book Changed','2011-07-25','98325',65540),(196654,'Author Created','2011-07-25','98305',65540),(196655,'Book Created','2011-07-25','98327',65540),(196656,'Book Copy Created','2011-07-25','163863',NULL),(196657,'Book Changed','2011-07-25','98327',65540),(196658,'Book Created','2011-07-25','98328',65540),(196659,'Book Copy Created','2011-07-25','163864',NULL),(196660,'Book Created','2011-07-25','98329',65540),(196661,'Book Copy Created','2011-07-25','163865',NULL),(196662,'Book Created','2011-07-25','98330',65540),(196663,'Book Copy Created','2011-07-25','163866',NULL),(196664,'Book Created','2011-07-25','98331',65540),(196665,'Book Copy Created','2011-07-25','163867',NULL),(196666,'Book Created','2011-07-25','98332',65540),(196667,'Book Created','2011-07-25','98333',65540),(196668,'Book Copy Created','2011-07-25','163868',NULL),(196669,'Book Changed','2011-07-25','65570',65540),(196670,'Book Changed','2011-07-25','98320',65540),(196671,'Book Changed','2011-07-25','98309',65540),(196672,'Book Changed','2011-07-25','65580',65540),(196673,'Book Copy Created','2011-07-25','163869',NULL),(196674,'Book Changed','2011-07-25','98332',65540),(196675,'Book Copy Created','2011-07-25','163870',NULL),(196676,'Book Copy Created','2011-07-25','163871',NULL),(196677,'Book Copy Created','2011-07-25','163872',NULL),(196678,'Book Created','2011-07-25','98334',65540),(196679,'Book Copy Created','2011-07-25','163873',NULL),(196680,'Book Copy Created','2011-07-25','163874',NULL),(196681,'Book Changed','2011-07-25','98320',65540),(196682,'Book Created','2011-07-25','98335',65540),(196683,'Book Copy Created','2011-07-25','163875',NULL),(196684,'Book Created','2011-07-25','98336',65540),(196685,'Book Copy Created','2011-07-25','163876',NULL),(196686,'Book Changed','2011-07-25','98336',65540),(196687,'Book Copy Created','2011-07-25','163877',NULL),(196688,'Book Created','2011-07-25','98337',65540),(196689,'Book Copy Created','2011-07-25','163878',NULL),(196690,'Book Copy Created','2011-07-25','163879',NULL),(196691,'Book Copy Created','2011-07-25','163880',NULL),(196692,'Book Created','2011-07-25','98338',65540),(196693,'Book Copy Created','2011-07-25','163881',NULL),(196694,'Book Created','2011-07-25','98339',65540),(196695,'Book Copy Created','2011-07-25','163882',NULL),(196696,'Book Copy Created','2011-07-25','163883',NULL),(196697,'Book Changed','2011-07-25','65554',65540),(196698,'Book Created','2011-07-25','98340',65540),(196699,'Book Copy Created','2011-07-25','163884',NULL),(196700,'Book Copy Created','2011-07-25','163885',NULL),(196701,'Book Created','2011-07-25','98341',65540),(196702,'Book Copy Created','2011-07-25','163886',NULL),(196703,'Book Changed','2011-07-25','98320',65540),(196704,'Book Created','2011-07-25','98342',65540),(196705,'Book Copy Created','2011-07-25','163887',NULL),(196706,'Book Copy Created','2011-07-25','163888',NULL),(196707,'Book Copy Created','2011-07-25','163889',NULL),(196708,'Book Copy Created','2011-07-25','163890',NULL),(196709,'Book Created','2011-07-25','98343',65540),(196710,'Book Copy Created','2011-07-25','163891',NULL),(196711,'Book Created','2011-07-25','98344',65540),(196712,'Book Copy Created','2011-07-25','163892',NULL),(196713,'Book Copy Created','2011-07-25','163893',NULL),(196714,'Book Copy Created','2011-07-25','163894',NULL),(196715,'Book Changed','2011-07-25','65564',65540),(196716,'Book Changed','2011-07-25','65564',65540),(196717,'Book Changed','2011-07-25','65564',65540),(196718,'Book Changed','2011-07-25','65564',65540),(196719,'Book Changed','2011-07-25','65564',65540),(196720,'Book Created','2011-07-25','98345',65540),(196721,'Book Copy Created','2011-07-25','163895',NULL),(196722,'Book Created','2011-07-25','98346',65540),(196723,'Book Copy Created','2011-07-25','163896',NULL),(196724,'Author Created','2011-07-25','98306',65540),(196725,'Book Created','2011-07-25','98347',65540),(196726,'Book Copy Created','2011-07-25','163897',NULL),(196727,'Book Created','2011-07-25','98348',65540),(196728,'Book Copy Created','2011-07-25','163898',NULL),(196729,'Book Changed','2011-07-25','98348',65540),(196730,'Book Created','2011-07-25','98349',65540),(196731,'Book Copy Created','2011-07-25','163899',NULL),(196732,'Book Changed','2011-07-25','98349',65540),(196733,'Book Created','2011-07-25','98350',65540),(196734,'Book Copy Created','2011-07-25','163900',NULL),(196735,'Book Created','2011-07-25','98351',65540),(196736,'Book Copy Created','2011-07-25','163901',NULL),(196737,'Book Created','2011-07-25','98352',65540),(196738,'Book Copy Created','2011-07-25','163902',NULL),(196739,'Book Created','2011-07-25','98353',65540),(196740,'Book Copy Created','2011-07-25','163903',NULL),(196741,'Book Created','2011-07-25','98354',65540),(196742,'Book Copy Created','2011-07-25','163904',NULL),(196743,'Book Created','2011-07-25','98355',65540),(196744,'Book Copy Created','2011-07-25','163905',NULL),(196745,'Book Created','2011-07-25','98356',65540),(196746,'Book Copy Created','2011-07-25','163906',NULL),(196747,'Book Created','2011-07-25','98357',65540),(196748,'Book Copy Created','2011-07-25','163907',NULL),(196749,'Book Created','2011-07-25','98358',65540),(196750,'Book Copy Created','2011-07-25','163908',NULL),(196751,'Book Created','2011-07-25','65566',65540),(196752,'Book Copy Created','2011-07-25','163909',NULL),(196753,'Book Created','2011-07-25','98360',65540),(196754,'Book Copy Created','2011-07-25','163910',NULL),(196755,'Book Copy Created','2011-07-25','163911',NULL),(196756,'Book Copy Created','2011-07-25','163912',NULL),(196757,'Book Created','2011-07-25','98361',65540),(196758,'Book Copy Created','2011-07-25','163913',NULL),(196759,'Book Created','2011-07-25','98363',65540),(196760,'Book Copy Created','2011-07-25','163914',NULL),(196761,'Book Created','2011-07-25','98364',65540),(196762,'Book Copy Created','2011-07-25','163915',NULL),(196763,'Book Created','2011-07-25','98365',65540),(196764,'Book Copy Created','2011-07-25','163916',NULL),(196765,'Book Changed','2011-07-25','98365',65540),(196766,'Book Created','2011-07-25','98366',65540),(196767,'Book Copy Created','2011-07-25','163917',NULL),(196768,'Book Created','2011-07-25','98367',65540),(196769,'Book Copy Created','2011-07-25','163918',NULL),(196770,'Book Created','2011-07-25','98368',65540),(196771,'Book Copy Created','2011-07-25','163919',NULL),(196772,'Book Created','2011-07-25','98369',65540),(196773,'Book Copy Created','2011-07-25','163920',NULL),(196774,'Book Created','2011-07-25','98370',65540),(196775,'Book Copy Created','2011-07-25','163921',NULL),(196776,'Book Created','2011-07-25','98371',65540),(196777,'Book Copy Created','2011-07-25','163922',NULL),(196778,'Book Created','2011-07-25','98372',65540),(196779,'Book Copy Created','2011-07-25','163923',NULL),(196780,'Book Changed','2011-07-25','98372',65540),(196781,'Book Changed','2011-07-25','65664',65540),(196782,'Book Changed','2011-07-25','65563',65540),(196783,'Book Changed','2011-07-25','65666',65540),(196784,'Book Changed','2011-07-25','65564',65540),(196785,'Book Changed','2011-07-25','65564',65540),(196786,'Book Created','2011-07-25','98373',65540),(196787,'Book Copy Created','2011-07-25','163924',NULL),(196788,'Book Returned to Publisher','2011-07-25','163924 Code:0183',65540),(196789,'Book Copy Created','2011-07-25','163925',NULL),(229376,'Book Created','2011-07-26','131072',65540),(229377,'Book Copy Created','2011-07-26','196608',NULL),(229378,'Book Changed','2011-07-26','131072',65540),(229379,'Author Created','2011-07-26','131072',65540),(229380,'Book Created','2011-07-26','131073',65540),(229381,'Book Copy Created','2011-07-26','196609',NULL),(229382,'Book Created','2011-07-26','131074',65540),(229383,'Book Copy Created','2011-07-26','196610',NULL),(229384,'Author Created','2011-07-26','131073',65540),(229385,'Book Created','2011-07-26','131075',65540),(229386,'Book Copy Created','2011-07-26','196611',NULL),(229387,'Book Copy Created','2011-07-26','196612',NULL),(229388,'Book Created','2011-07-26','131076',65540),(229389,'Book Copy Created','2011-07-26','196613',NULL),(229390,'Author Created','2011-07-26','131074',65540),(229391,'Book Created','2011-07-26','131077',65540),(229392,'Book Copy Created','2011-07-26','196614',NULL),(229393,'Book Copy Created','2011-07-26','196615',NULL),(229394,'Book Created','2011-07-26','131078',65540),(229395,'Book Copy Created','2011-07-26','196616',NULL),(229396,'Book Created','2011-07-26','131079',65540),(229397,'Book Copy Created','2011-07-26','196617',NULL),(229398,'Book Created','2011-07-26','131080',65540),(229399,'Book Copy Created','2011-07-26','196618',NULL),(229400,'Book Created','2011-07-26','131081',65540),(229401,'Book Copy Created','2011-07-26','196619',NULL),(229402,'Book Created','2011-07-26','131082',65540),(229403,'Book Copy Created','2011-07-26','196620',NULL),(229404,'Book Created','2011-07-26','32768',65540),(229405,'Book Copy Created','2011-07-26','196621',NULL),(229406,'Book Changed','2011-07-26','32768',65540),(229407,'Book Created','2011-07-26','131084',65540),(229408,'Book Copy Created','2011-07-26','196622',NULL),(229409,'Book Copy Created','2011-07-26','196622',NULL),(229410,'Book Copy Created','2011-07-26','196622',NULL),(229411,'Book Created','2011-07-26','131085',65540),(229412,'Book Copy Created','2011-07-26','196625',NULL),(229413,'Book Created','2011-07-26','131086',65540),(229414,'Book Copy Created','2011-07-26','196626',NULL),(229415,'Book Changed','2011-07-26','131085',65540),(229416,'Book Changed','2011-07-26','131086',65540),(229417,'Book Changed','2011-07-26','131084',65540),(229418,'Book Changed','2011-07-26','32768',65540),(229419,'Book Created','2011-07-26','131087',65540),(229420,'Book Copy Created','2011-07-26','196627',NULL),(229421,'Book Created','2011-07-26','131088',65540),(229422,'Book Copy Created','2011-07-26','196628',NULL),(229423,'Book Created','2011-07-26','131089',65540),(229424,'Book Copy Created','2011-07-26','196629',NULL),(229425,'Book Created','2011-07-26','131090',65540),(229426,'Book Copy Created','2011-07-26','196630',NULL),(229427,'Book Created','2011-07-26','131091',65540),(229428,'Book Copy Created','2011-07-26','196631',NULL),(229429,'Book Created','2011-07-26','131092',65540),(229430,'Book Copy Created','2011-07-26','196632',NULL),(229431,'Book Created','2011-07-26','131093',65540),(229432,'Book Copy Created','2011-07-26','196633',NULL),(229433,'Book Created','2011-07-26','131094',65540),(229434,'Book Copy Created','2011-07-26','196634',NULL),(229435,'Book Created','2011-07-26','131095',65540),(229436,'Book Copy Created','2011-07-26','196635',NULL),(229437,'Book Created','2011-07-26','131096',65540),(229438,'Book Copy Created','2011-07-26','196636',NULL),(229439,'Book Copy Created','2011-07-26','196637',NULL),(229440,'Book Created','2011-07-26','131097',65540),(229441,'Book Copy Created','2011-07-26','196638',NULL),(229442,'Book Created','2011-07-26','131098',65540),(229443,'Book Copy Created','2011-07-26','196639',NULL),(229444,'Book Created','2011-07-26','131099',65540),(229445,'Book Copy Created','2011-07-26','196640',NULL),(229446,'Book Created','2011-07-26','131100',65540),(229447,'Book Copy Created','2011-07-26','196641',NULL),(229448,'Book Copy Created','2011-07-26','196641',NULL),(229449,'Book Created','2011-07-26','131101',65540),(229450,'Book Copy Created','2011-07-26','196643',NULL),(229451,'Book Created','2011-07-26','131102',65540),(229452,'Book Copy Created','2011-07-26','196644',NULL),(229453,'Book Created','2011-07-26','131103',65540),(229454,'Book Copy Created','2011-07-26','196645',NULL),(229455,'Book Created','2011-07-26','131104',65540),(229456,'Book Copy Created','2011-07-26','196646',NULL),(229457,'Book Created','2011-07-26','131105',65540),(229458,'Book Copy Created','2011-07-26','196647',NULL),(229459,'Book Created','2011-07-26','131106',65540),(229460,'Book Copy Created','2011-07-26','196648',NULL),(229461,'Book Created','2011-07-26','131107',65540),(229462,'Book Copy Created','2011-07-26','196649',NULL),(229463,'Book Created','2011-07-26','131108',65540),(229464,'Book Copy Created','2011-07-26','196650',NULL),(229465,'Book Copy Created','2011-07-26','196651',NULL),(229466,'Book Copy Created','2011-07-26','196652',NULL),(229467,'Book Created','2011-07-26','131109',65540),(229468,'Book Copy Created','2011-07-26','196653',NULL),(229469,'Book Created','2011-07-26','131110',65540),(229470,'Book Copy Created','2011-07-26','196654',NULL),(229471,'Book Changed','2011-07-26','65564',65540),(229472,'Book Changed','2011-07-26','65564',65540),(262144,'Author Changed','2011-12-03','3',65540),(262145,'Author Changed','2011-12-03','3',65540),(262146,'Book Created','2011-12-03','163840',65540),(262147,'Book Copy Created','2011-12-03','229376',NULL),(262148,'Author Created','2011-12-03','163840',65540),(262149,'Book Created','2011-12-03','163841',65540),(262150,'Author Changed','2011-12-03','163840',65540),(262151,'Book Copy Created','2011-12-03','229377',NULL),(262152,'Book Changed','2011-12-03','163841',65540),(262153,'Book Created','2011-12-03','163842',65540),(262154,'Book Copy Created','2011-12-03','229378',NULL),(262155,'Book Created','2011-12-03','65587',65540),(262156,'Book Copy Created','2011-12-03','229379',NULL),(262157,'Book Created','2011-12-03','163844',65540),(262158,'Book Copy Created','2011-12-03','229380',NULL),(262159,'Book Created','2011-12-03','131080',65540),(262160,'Book Copy Created','2011-12-03','229381',NULL),(262161,'Book Created','2011-12-03','163846',65540),(262162,'Book Copy Created','2011-12-03','229382',NULL),(262163,'Book Created','2011-12-03','163847',65540),(262164,'Book Copy Created','2011-12-03','229383',NULL),(262165,'Book Created','2011-12-03','163848',65540),(262166,'Book Copy Created','2011-12-03','229384',NULL),(262167,'Book Changed','2011-12-03','98350',65540),(262168,'Book Changed','2012-01-17','5',65540),(262169,'Book Copy Created','2012-01-17','229385',NULL),(262170,'Book Copy Created','2012-01-17','229386',NULL),(262171,'Book Copy Created','2012-01-17','229387',NULL),(262172,'Book Created','2012-01-17','163849',65540),(262173,'Book Copy Created','2012-01-17','229388',NULL),(262174,'Book Created','2012-01-17','163850',65540),(262175,'Book Copy Created','2012-01-17','229389',NULL),(262176,'Book Copy Created','2012-01-18','229390',NULL),(262177,'Book Copy Created','2012-01-18','229391',NULL),(262178,'Book Borrowed','2012-01-18','229389 Code:0280',65540),(262179,'Person Created','2012-01-18','98304',65540),(262180,'Book Borrowed','2012-01-18','163893 Code:0214',65540),(262181,'Book Detach','2012-01-18','131075 Code:0004',65540),(262182,'Book Attach','2012-01-18','131075 Code:0004',65540),(262183,'Book Detach','2012-01-18','131075 Code:0004',65540),(262184,'Book Attach','2012-01-18','131075 Code:0004',65540),(262185,'Book Changed','2012-01-21','65670',65540),(262186,'Book Changed','2012-01-21','65564',65540),(262187,'Book Changed','2012-01-21','98336',65540),(262188,'Book Changed','2012-01-21','65582',65540),(262189,'Book Changed','2012-01-21','98305',65540),(262190,'Person Created','2012-01-21','98305',65540),(262191,'Book Borrowed','2012-01-21','229390 Code:0281',65540),(262192,'Book Borrowed','2012-01-21','229391 Code:0282',65540),(294912,'Person Changed','2012-01-21','98305',65540),(327680,'Person Changed','2012-01-21','98305',65540),(360448,'Person Created','2012-02-01','131072',65543),(360449,'Book Borrowed','2012-02-01','131119 Code:0049',65543),(360450,'Book Returned','2012-02-01','131119 Code:0049',65543),(360451,'Person Created','2012-02-01','131073',65543),(360452,'Book Borrowed','2012-02-01','131119 Code:0049',65543),(360453,'Book Returned','2012-02-01','131119 Code:0049',65543),(360454,'Person Created','2012-02-01','131074',65542),(360455,'Book Borrowed','2012-02-01','131080 Code:0010',65542),(360456,'Person Created','2012-02-03','131075',65540),(360457,'Book Borrowed','2012-02-03','163881 Code:0147',65540),(360458,'Person Created','2012-02-05','131076',65540),(360459,'Book Borrowed','2012-02-05','131086 Code:0016',65540),(360460,'Book Borrowed','2012-02-05','163845 Code:0175',65540),(360461,'Book Borrowed','2012-02-05','163892 Code:0215',65540),(360462,'Book Borrowed','2012-02-05','131081 Code:0011',65540);
+/*!40000 ALTER TABLE `LibrarianAction` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Librarian_Library`
+--
+
+DROP TABLE IF EXISTS `Librarian_Library`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Librarian_Library` (
+  `librarians_id` bigint(20) NOT NULL,
+  `permittedLibraries_id` bigint(20) NOT NULL,
+  PRIMARY KEY  (`librarians_id`,`permittedLibraries_id`),
+  KEY `FK8F7EBD5457F66321` (`permittedLibraries_id`),
+  KEY `FK8F7EBD5483B92524` (`librarians_id`),
+  KEY `FK8F7EBD5441142556` (`permittedLibraries_id`),
+  KEY `FK8F7EBD549C6F2E19` (`librarians_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Librarian_Library`
+--
+
+LOCK TABLES `Librarian_Library` WRITE;
+/*!40000 ALTER TABLE `Librarian_Library` DISABLE KEYS */;
+INSERT INTO `Librarian_Library` VALUES (1,1),(32768,1),(32769,1),(65536,1),(65537,1),(65538,1),(65539,1),(65540,1),(65541,1),(65542,1),(65543,1),(65544,1),(65545,1);
+/*!40000 ALTER TABLE `Librarian_Library` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Library`
+--
+
+DROP TABLE IF EXISTS `Library`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Library` (
+  `id` bigint(20) NOT NULL,
+  `place` varchar(70) NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `place` (`place`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Library`
+--
+
+LOCK TABLES `Library` WRITE;
+/*!40000 ALTER TABLE `Library` DISABLE KEYS */;
+INSERT INTO `Library` VALUES (1,'Praha');
+/*!40000 ALTER TABLE `Library` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Person`
+--
+
+DROP TABLE IF EXISTS `Person`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Person` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(70) NOT NULL,
+  `telephone` varchar(20) default NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Person`
+--
+
+LOCK TABLES `Person` WRITE;
+/*!40000 ALTER TABLE `Person` DISABLE KEYS */;
+INSERT INTO `Person` VALUES (1,'Stanišová Nikol','nikol.stanisova@gmail.com','777042456'),(2,'Ryška Jakub','ryskajakub@seznam.cz','777602874'),(32768,'Vlčková Jiřina','jirinavlckova@gmail.com','608 912 704'),(65536,'Šolek Lubomír - Lunghta','minorityside@ufoni.cz',' 605 488 180'),(98304,'Lekeš Jan','jan.lekes@gmail.com','776710577'),(98305,'Čeřeňová Jana','jcerenova@yahoo.co.uk','732501227'),(131072,'Štys Filip','filip23@gmail.com','724637047'),(131073,'Švamberková Jiřina','zelenyservis@volny.cz','603328299'),(131074,'Hamáček Ivan','ihamacek@volny.cz','777211673'),(131075,'Magda Ouřecká','omagdalena@seznam.cz','603920967'),(131076,'David Kossler','kosslerdavid@seznam.cz','777721630');
+/*!40000 ALTER TABLE `Person` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Tag`
+--
+
+DROP TABLE IF EXISTS `Tag`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Tag` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Tag`
+--
+
+LOCK TABLES `Tag` WRITE;
+/*!40000 ALTER TABLE `Tag` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Tag` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `hibernate_sequences`
+--
+
+DROP TABLE IF EXISTS `hibernate_sequences`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `hibernate_sequences` (
+  `sequence_name` varchar(255) default NULL,
+  `sequence_next_hi_value` int(11) default NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `hibernate_sequences`
+--
+
+LOCK TABLES `hibernate_sequences` WRITE;
+/*!40000 ALTER TABLE `hibernate_sequences` DISABLE KEYS */;
+INSERT INTO `hibernate_sequences` VALUES ('Library',1),('Librarian',3),('Author',6),('LibrarianAction',12),('Book',6),('Person',5),('BookCopy',8),('Borrow',5);
+/*!40000 ALTER TABLE `hibernate_sequences` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-02-08 21:11:37

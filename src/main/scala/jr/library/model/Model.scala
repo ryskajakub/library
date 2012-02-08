@@ -141,13 +141,14 @@ class Borrow extends SuperEntity with Serializable{
 	var from_ :Date = _
 	def from = from_
 	def from_= (f:Date){from_ = f}
-	def shouldTo = new Date(from.getTime + (Borrow.day.toLong * 30))
+	def shouldTo = new Date(from.getTime + (Borrow.day.toLong * Borrow.daysBorrow))
 	override def initializeLazyFields{}
 }
 object Borrow{
 	def day = (1000L * 60 * 60 * 24)
-	//def day = 1000 * 60
 	def finePerDay = 3
+  def daysBorrow = 60L;
+  def daysFortnight = 53L;
 }
 
 @NamedQueries(
@@ -237,7 +238,7 @@ class Library extends SuperEntity with Serializable {
 @Entity
 @NamedQueries(
 	Array(
-		new NamedQuery(name = "Person.findAll", query = "select p from Person p"),
+		new NamedQuery(name = "Person.findAll", query = "select p from Person p order by p.name"),
 		new NamedQuery(name = "Person.findByName", query = "select p from Person p where p.name = :name")
 	)
 )
