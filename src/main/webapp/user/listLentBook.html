@@ -1,6 +1,6 @@
 <lift:surround with="userDefault" at="content">
 	<h1><lift:loc locid="listLent"/></h1>
-	<table>
+	<table class="lentBooks">
 		<tr>
 			<th><lift:loc locid="who"/></th>
 			<th><lift:loc locid="what"/></th>
@@ -15,7 +15,7 @@
 				<td><column:what /></td>
 				<td><column:code /></td>
 				<td><column:startDate /></td>
-				<td style="border-left: 1px solid black"><column:shouldDate /></td>
+				<td><column:shouldDate /></td>
 				<td><column:fine /></td>
 			</tr>
 		</lift:Browse.repeatLentBooks>

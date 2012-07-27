@@ -131,5 +131,7 @@ a{
 	display:inline;
 	font-weight: bold;
 }
-
+.lentBooks td{
+    border: 1px solid black;
+}
 
