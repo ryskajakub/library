@@ -131,7 +131,6 @@ a{
 	display:inline;
 	font-weight: bold;
 }
-.lentBooks td{
+.lentBooks td, .allBorrows td{
     border: 1px solid black;
 }
-

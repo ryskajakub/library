@@ -55,6 +55,20 @@ class Browse {
     })
   }
 
+  def repeatAllBorrows(xhtml: NodeSeq) = {
+    val allBorrows = Service.borrow.findAll
+    allBorrows.flatMap((borrow: Borrow) => {
+      Helpers.bind(
+        "entry", xhtml,
+        "who" -%> Text(borrow.getPerson().getName()),
+        "what" -%> Text(borrow.getBookCopy().getBook().getName()),
+        "code" -%> Text(borrow.getBookCopy().getCode()),
+        "startDate" -%> Text(formatCz(borrow.getFrom_())),
+        "endDate" -%> Text(formatCz(borrow.getRealTo()))
+      )
+    })
+  }
+
   def repeatAllBooks(xhtml: NodeSeq) = {
     val allBooks = Service.book.findAll
     allBooks.flatMap((x: Book) => {

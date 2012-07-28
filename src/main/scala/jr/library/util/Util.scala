@@ -9,7 +9,8 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 package object util {
-	def formatCz(x:Date) = {
+	def formatCz(x:Date):String = {
+	  if(x == null) return ""
 		val df = new SimpleDateFormat("dd.MM.yyyy")
 		df.format(x)
 	}
