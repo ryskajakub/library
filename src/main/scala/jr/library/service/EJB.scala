@@ -228,7 +228,7 @@ pošleš na komunitní účet 1021034503/5500 spec. symbol 900
 				val dateFormat = DateFormat.getDateInstance(DateFormat.SHORT,new Locale("cs"))
 				val moreDaysLater = new Date(x.from.getTime + (Borrow.day * 60))
 				sendMail("""
-Ahoj, půjčená kniha """ + x.person.name + """ by měla být za tři dny vrácena
+Ahoj, půjčená kniha """ + x.bookCopy.book.name + """ by měla být za tři dny vrácena
 do knihovny, jinak ti bude účtováno domluvené půjčovné 3,- na den
 za každý den po datu """ + dateFormat.format(moreDaysLater) + """.""",x.person.email)
 			case (Some(x),EmailType.warning) => sendMail("""
